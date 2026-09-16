@@ -1,0 +1,8 @@
+.env
+.venv/
+.goose/
+__pycache__/
+*.pptx
+*.doc
+*.pyc
+.DS_Store
