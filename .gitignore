@@ -2,6 +2,7 @@
 .venv/
 .goose/
 __pycache__/
+references/
 *.pptx
 *.doc
 *.pyc
