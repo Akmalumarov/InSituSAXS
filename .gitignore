@@ -12,3 +12,5 @@ references/
 *.dat
 *.edf
 *.h5
+
+*.pdb
