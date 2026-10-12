@@ -3,12 +3,12 @@ from pathlib import Path
 
 folder = Path(__file__).resolve().parents[1] / "results/synthetic/Pq"
 
-expected = {"sphere": 15.3, "cylinder": 12.0}
+expected = {"spheres_1": 15.3, "long_cylinders_1": 12.0}
 passed = True
 
 for model, R_true in expected.items():
     try:
-        with open(folder / f"{model}_fit.json") as f:
+        with open(folder / f"{model}.json") as f:
             R_fit = json.load(f)["parameters"]["radius_nm"]
 
         error = abs(R_fit / R_true - 1)
