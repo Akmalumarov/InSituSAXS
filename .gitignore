@@ -2,7 +2,6 @@
 .venv/
 .goose/
 __pycache__/
-references/
 *.pptx
 *.doc
 *.pyc
@@ -14,3 +13,4 @@ references/
 *.h5
 
 *.pdb
+/references/**/*.pdf
