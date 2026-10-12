@@ -1,0 +1,10 @@
+{
+  "sphere": {
+    "radius_nm": 15.3,
+    "polydispersity": 0.1
+  },
+  "cylinder": {
+    "radius_nm": 12.0,
+    "polydispersity": 0.1
+  }
+}

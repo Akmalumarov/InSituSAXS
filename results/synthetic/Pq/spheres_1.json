@@ -1,0 +1,11 @@
+{
+  "model": "sphere",
+  "parameters": {
+    "radius_nm": 16.276541328619857,
+    "polydispersity": 0.1,
+    "scale": 41964.708483236616,
+    "background": 1.0019005311341354
+  },
+  "success": true,
+  "message": "`ftol` termination condition is satisfied."
+}

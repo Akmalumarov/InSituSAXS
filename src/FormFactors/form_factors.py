@@ -266,3 +266,120 @@ def infinite_cylinder_radial_intensity(
     """P(q) бесконечного цилиндра с радиальным профилем, нормированная на объём."""
     V = np.pi * R ** 2 * L
     return infinite_cylinder_radial_amplitude(q, rho_r, R, L) ** 2 / V
+
+# ---------------------------------------------------------------------------
+# Полидисперсность радиуса (Gaussian)
+# ---------------------------------------------------------------------------
+
+def _gauss_pd_weight(r: np.ndarray, R0: float, sigma: float) -> np.ndarray:
+    """Вес Gaussian-распределения радиуса: exp(-(r-R0)^2/(2 sigma^2)).
+
+    sigma = pd * R0, где pd — относительная полидисперсность.
+    """
+    return np.exp(-0.5 * ((r - R0) / sigma) ** 2)
+
+
+def sphere_intensity_pd(
+    q: np.ndarray,
+    R0: float,
+    pd: float = 0.0,
+    rho: float = 1.0,
+    n_pts: int = 200,
+    r_lo: float = 0.0,
+    r_hi: float | None = None,
+) -> np.ndarray:
+    """P(q) сферы с Gaussian-полидисперсностью радиуса.
+
+    Усреднение по радиусу: <P(q)> = ∫ P(q,R) w(R) dR / ∫ w(R) dR,
+    где w(R) — гауссово распределение со средним R0 и sigma = pd*R0.
+    """
+    sigma = pd * R0
+    if sigma <= 0:
+        return sphere_intensity(q, R0, rho)
+    if r_hi is None:
+        r_hi = R0 + 4.0 * sigma
+    r = np.linspace(r_lo, r_hi, n_pts)
+    w = _gauss_pd_weight(r, R0, sigma)
+    # P(q,R) = rho^2 V(R) f(qR)^2  (V = 4/3 pi R^3)
+    V = 4.0 / 3.0 * np.pi * r ** 3
+    f = _sphere_f(np.asarray(q, dtype=float)[:, None] * r[None, :])
+    P = rho ** 2 * V[None, :] * f ** 2
+    return np.trapezoid(P * w[None, :], r, axis=1) / np.trapezoid(w, r)
+
+
+def infinite_cylinder_intensity_pd(
+    q: np.ndarray,
+    R0: float,
+    pd: float = 0.0,
+    rho: float = 1.0,
+    L: float = 1.0,
+    n_pts: int = 200,
+    r_lo: float = 0.0,
+    r_hi: float | None = None,
+) -> np.ndarray:
+    """P(q) бесконечного цилиндра с Gaussian-полидисперсностью радиуса.
+
+    Усреднение по радиусу: <P(q)> = ∫ P(q,R) w(R) dR / ∫ w(R) dR.
+    P(q,R) = rho^2 V(R) [2 J1(qR)/(qR)]^2, V = pi R^2 L.
+    """
+    sigma = pd * R0
+    if sigma <= 0:
+        return infinite_cylinder_intensity(q, R0, rho, L)
+    if r_hi is None:
+        r_hi = R0 + 4.0 * sigma
+    r = np.linspace(r_lo, r_hi, n_pts)
+    w = _gauss_pd_weight(r, R0, sigma)
+    V = np.pi * r ** 2 * L
+    j = 2.0 * _j1_over_x(np.asarray(q, dtype=float)[:, None] * r[None, :])
+    P = rho ** 2 * V[None, :] * j ** 2
+    return np.trapezoid(P * w[None, :], r, axis=1) / np.trapezoid(w, r)
+
+
+# ---------------------------------------------------------------------------
+# Нормированные форм-факторы (P(0) = 1) с полидисперсностью
+# ---------------------------------------------------------------------------
+
+def sphere_intensity_pd_norm(
+    q: np.ndarray,
+    R0: float,
+    pd: float = 0.0,
+    n_pts: int = 200,
+    r_lo: float = 0.0,
+    r_hi: float | None = None,
+) -> np.ndarray:
+    """P(q) сферы с Gaussian-полидисперсностью, нормированный на P(0)=1.
+
+    <P(q)> = ∫ f(qR)^2 w(R) dR / ∫ w(R) dR,  f(x)=3(sin x - x cos x)/x^3.
+    """
+    sigma = pd * R0
+    if sigma <= 0:
+        return _sphere_f(np.asarray(q, dtype=float) * R0) ** 2
+    if r_hi is None:
+        r_hi = R0 + 4.0 * sigma
+    r = np.linspace(r_lo, r_hi, n_pts)
+    w = _gauss_pd_weight(r, R0, sigma)
+    f = _sphere_f(np.asarray(q, dtype=float)[:, None] * r[None, :])
+    return np.trapezoid(f ** 2 * w[None, :], r, axis=1) / np.trapezoid(w, r)
+
+
+def infinite_cylinder_intensity_pd_norm(
+    q: np.ndarray,
+    R0: float,
+    pd: float = 0.0,
+    n_pts: int = 200,
+    r_lo: float = 0.0,
+    r_hi: float | None = None,
+) -> np.ndarray:
+    """P(q) бесконечного цилиндра с полидисперсностью, нормированный на P(0)=1.
+
+    <P(q)> = ∫ [2 J1(qR)/(qR)]^2 w(R) dR / ∫ w(R) dR.
+    """
+    sigma = pd * R0
+    if sigma <= 0:
+        return (2.0 * _j1_over_x(np.asarray(q, dtype=float) * R0)) ** 2
+    if r_hi is None:
+        r_hi = R0 + 4.0 * sigma
+    r = np.linspace(r_lo, r_hi, n_pts)
+    w = _gauss_pd_weight(r, R0, sigma)
+    j = 2.0 * _j1_over_x(np.asarray(q, dtype=float)[:, None] * r[None, :])
+    return np.trapezoid(j ** 2 * w[None, :], r, axis=1) / np.trapezoid(w, r)
