@@ -1,11 +1,11 @@
 {
   "model": "cylinder",
   "parameters": {
-    "radius_nm": 9.999999999999995,
+    "radius_nm": 12.472119810895334,
     "polydispersity": 0.1,
-    "scale": 12610.013661610501,
-    "background": -0.000999999819040808
+    "scale": 1389.1751142288629,
+    "background": 0.9950610774959485
   },
   "success": true,
-  "message": "`ftol` termination condition is satisfied."
+  "message": "Both `ftol` and `xtol` termination conditions are satisfied."
 }

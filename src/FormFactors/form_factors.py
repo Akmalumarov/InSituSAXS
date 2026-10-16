@@ -117,9 +117,15 @@ def infinite_cylinder_amplitude(q: np.ndarray, R: float, rho: float = 1.0, L: fl
 
 
 def infinite_cylinder_intensity(q: np.ndarray, R: float, rho: float = 1.0, L: float = 1.0) -> np.ndarray:
-    """P(q) бесконечного цилиндра, нормированная на объём."""
+    """P(q) бесконечного цилиндра, нормированная на объём.
+
+    Ориентационно-усреднённый форм-фактор длинного цилиндра (L >> R):
+    P(q) = rho^2 V [2 J1(qR)/(qR)]^2 / q,  V = pi R^2 L.
+    Фактор 1/q — от усреднения по ориентации оси цилиндра.
+    """
     V = np.pi * R ** 2 * L
-    return infinite_cylinder_amplitude(q, R, rho, L) ** 2 / V
+    q = np.asarray(q, dtype=float)
+    return infinite_cylinder_amplitude(q, R, rho, L) ** 2 / V / q
 
 
 def cylinder_amplitude(
@@ -320,7 +326,9 @@ def infinite_cylinder_intensity_pd(
     """P(q) бесконечного цилиндра с Gaussian-полидисперсностью радиуса.
 
     Усреднение по радиусу: <P(q)> = ∫ P(q,R) w(R) dR / ∫ w(R) dR.
-    P(q,R) = rho^2 V(R) [2 J1(qR)/(qR)]^2, V = pi R^2 L.
+    P(q,R) = rho^2 V(R) [2 J1(qR)/(qR)]^2 / q, V = pi R^2 L.
+
+    Фактор 1/q — от ориентационного усреднения длинного цилиндра (L >> R).
     """
     sigma = pd * R0
     if sigma <= 0:
@@ -331,7 +339,7 @@ def infinite_cylinder_intensity_pd(
     w = _gauss_pd_weight(r, R0, sigma)
     V = np.pi * r ** 2 * L
     j = 2.0 * _j1_over_x(np.asarray(q, dtype=float)[:, None] * r[None, :])
-    P = rho ** 2 * V[None, :] * j ** 2
+    P = rho ** 2 * V[None, :] * j ** 2 / np.asarray(q, dtype=float)[:, None]
     return np.trapezoid(P * w[None, :], r, axis=1) / np.trapezoid(w, r)
 
 
@@ -372,14 +380,22 @@ def infinite_cylinder_intensity_pd_norm(
 ) -> np.ndarray:
     """P(q) бесконечного цилиндра с полидисперсностью, нормированный на P(0)=1.
 
-    <P(q)> = ∫ [2 J1(qR)/(qR)]^2 w(R) dR / ∫ w(R) dR.
+    Ориентационно-усреднённый форм-фактор длинного цилиндра (L >> R) содержит
+    фактор 1/q от усреднения по углу между осью цилиндра и q:
+
+        <P(q)> = (1/q) ∫ [2 J1(qR)/(qR)]^2 w(R) dR / ∫ w(R) dR.
+
+    Без фактора 1/q асимптотика была бы [2J1(qR)/(qR)]^2 ~ q^-3, тогда как
+    правильная асимптотика длинного цилиндра ~ q^-4. Фактор 1/q критичен для
+    корректного восстановления радиуса при фитировании.
     """
+    q = np.asarray(q, dtype=float)
     sigma = pd * R0
     if sigma <= 0:
-        return (2.0 * _j1_over_x(np.asarray(q, dtype=float) * R0)) ** 2
+        return (2.0 * _j1_over_x(q * R0)) ** 2 / q
     if r_hi is None:
         r_hi = R0 + 4.0 * sigma
     r = np.linspace(r_lo, r_hi, n_pts)
     w = _gauss_pd_weight(r, R0, sigma)
-    j = 2.0 * _j1_over_x(np.asarray(q, dtype=float)[:, None] * r[None, :])
-    return np.trapezoid(j ** 2 * w[None, :], r, axis=1) / np.trapezoid(w, r)
+    j = 2.0 * _j1_over_x(q[:, None] * r[None, :])
+    return np.trapezoid(j ** 2 * w[None, :], r, axis=1) / np.trapezoid(w, r) / q

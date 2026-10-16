@@ -130,7 +130,10 @@ def fit_form_factor(
         q_fit = q_nm
         I_fit_exp = I_exp
 
-    # Оценка начального радиуса по первому минимуму (для сферы q*R ~ 4.49)
+    # Оценка начального радиуса по первому минимуму.
+    # Сфера: первый минимум f(qR) при qR ~ 4.493.
+    # Длинный цилиндр: первый минимум [2J1(qR)/(qR)]^2 при qR ~ 3.832
+    #   (первый ноль J1).
     if radius_guess is None:
         # ищем первый локальный минимум лог-интенсивности
         logI = np.log(I_fit_exp + 1e-12)
@@ -140,7 +143,10 @@ def fit_form_factor(
         idx = np.where((sign[:-1] < 0) & (sign[1:] > 0))[0]
         if len(idx) > 0:
             q_min = q_fit[idx[0] + 1]
-            radius_guess = 4.493 / q_min if q_min > 0 else 1.0
+            if model == "cylinder":
+                radius_guess = 3.8317 / q_min if q_min > 0 else 1.0
+            else:
+                radius_guess = 4.493 / q_min if q_min > 0 else 1.0
         else:
             radius_guess = 1.0
 
