@@ -1,0 +1,2378 @@
+J. Phys. Chem. B 2005, 109, 1347-1360
+
+1347
+
+Scattering Curves of Ordered Mesoscopic Materials
+S. Fo1 rster,* A. Timmann, M. Konrad, C. Schellbach, and A. Meyer
+Institut für Physikalische Chemie, UniVersität Hamburg, Grindelallee 117, D-20146 Hamburg, Germany
+
+S. S. Funari
+HASYLAB, DESY, Notkestrasse 85, D-22603 Hamburg, Germany
+
+P. Mulvaney
+School of Chemistry, UniVersity of Melbourne, ParkVille, VIC 3010 Australia
+
+R. Knott
+ANSTO, Menai, NSW 2234 Australia
+ReceiVed: July 22, 2004; In Final Form: October 22, 2004
+
+Analytical expressions for the scattering functions of ordered mesoscopic materials are derived and compared
+to experimentally determined scattering curves. Ordered structures comprising spheres (fcc, bcc, hcp, sc),
+cylinders (hex, sq), and lamellar structures are considered. The expressions take into account particle size
+distributions and lattice point deviations, domain size, core/shell structures, as well as peak shapes varying
+analytically between Lorentzian and Gaussian functions. The expressions allow one to quantitatively describe
+high-resolution synchrotron small-angle X-ray (SAXS) and neutron scattering (SANS) curves from lipid and
+block copolymer lyotropic phases, core/shell nanoparticle superstructures, ordered nanocomposites, and ordered
+mesoporous materials. In addition, the diffuse out-of-plane scattering of grazing incidence GISAXS and
+GISANS experiments of laterally ordered thin films can be quantitatively analyzed.
+
+1. Introduction
+Many substances such as surfactants, lipids, block copolymers, nanoparticles, polymer colloids, and biopolymers can selfassemble into ordered mesoscopic superstructures, i.e., structures
+on length scales of 1-1000 nm. Such nanostructured materials
+are not only fascinating in their own right but are also of great
+importance in biomedical applications, catalysis, photonics, and
+high-performance materials.1-4
+Among the analytical techniques that are most widely used
+to characterize ordered mesoscopic materials are optical and
+electron microscopy, X-ray and neutron diffraction, and spectroscopic methods such as NMR and IR. With the advent of
+modern X-ray optics in sealed tube or rotating anode X-ray
+devices, and with the use of high-brilliance synchrotron-SAXS
+and SANS beamlines, high-resolution scattering curves over a
+large q-range can now be obtained within short accumulation
+times (down to milliseconds), enabling a fast and detailed
+measurement and analysis of ordered mesoscopic materials over
+the complete size range of 1 nm up to several µm. The amount
+of available information that could be obtained from these
+scattering curves can go considerably beyond the simple
+determination of peak positions and peak widths.
+For a quantitative analysis of X-ray or neutron scattering
+curves, methods have been developed for ordered lattices of
+spheres using particle distribution functions5-8 and paracrystal
+theory,9,10 and for lamellae and bilayers using interfacial
+distribution functions11 or the Caillé model.12-14 These models
+consider the influence of particle size, volume fraction, and
+degree of order to calculate the scattering curves. For many
+applications it would be desirable to have a common approach
+
+that allows one to calculate scattering curves of the most prevalent ordered spherical (bcc, fcc, hcp, sc), cylindrical (sq, hex),
+and lamellar structures (lam) in order to obtain complete information on the space group, unit cell dimension, mean lattice
+displacement, particle size and size distribution, core/shell structure, and mean domain size. A general framework for such an
+approach has been given by Ruland.15,16 Within this framework,
+and together with the approach we developed for the calculation
+of particle form factors,17 we outline a general approach based
+on the decoupling approximation that yields analytical expressions for the scattering curves of ordered d-dimensional structures, where d ) 1 for disks or lamellae, d ) 2 for cylinders,
+and d ) 3 for spherical structures. We discuss advantages and
+limitations of the model and demonstrate, using examples from
+literature and our own experiments, the applicability of this
+model to quantitatively fit high-resolution SAXS and SANS
+curves of core/shell nanoparticle superlayers, surfactant, lipid and
+block copolymer lyotropic phases, as well as ordered nanocomposites, mesoporous materials, and nanostructured thin films.
+2. Experimental Section
+2.1. Samples. The block copolymers, poly(butadiene-bethylene oxide) (PB-PEO) and poly(isoprene-b-ethylene oxide)
+(PI-PEO), were synthesized by living anionic polymerization
+and have narrow molecular weight distribution. The synthesis
+is described elsewhere.18 Their degrees of polymerization
+(subscripts) and sample code are PB43-PEO59-16, PI92-PEO342, PI93-PEO87-3, and PI58-PEO131-11 as determined from mass
+spectrometry (MALDI-TOF-MS), gel permeation chromatography (GPC), and NMR. The polymers were directly dissolved
+
+10.1021/jp0467494 CCC: $30.25 © 2005 American Chemical Society
+Published on Web 01/08/2005
+
+1348 J. Phys. Chem. B, Vol. 109, No. 4, 2005
+
+Förster et al.
+
+in water or methylcyclohexane to obtain lyotropic liquid
+crystalline phases. The preparations of the ordered nanocomposites and mesoporous materials are given in refs 19 and 20.
+Au@SiO2 core/shell nanoparticles were synthesized as described elsewhere.21 The Au cores have a diameter of 15 nm;
+the total diameter of the particles is 75 nm as determined from
+transmission electron microscopy. Crystals of these core/shell
+nanoparticles were prepared by centrifugation of the core/shell
+particles in ethanol in a high-speed centrifuge for 3 h. Tetraethoxysilane was added to gel the colloid lattice during
+centrifugation. Full details of the crystal synthesis are provided
+elsewhere.22
+2.2. SAXS. Synchrotron SAXS of lyotropic block copolymer
+phases was performed on the A2 beamline at HASYLAB/
+DESY, Hamburg (Germany). The beamline is equipped with a
+two-dimensional CCD detector (MAR Research) and operates
+at a fixed wavelength of λ ) 0.15 nm. The sample-detector
+distance was 3.00 m. Our in-house rotating anode device
+(Seifert, Ahrensburg) consists of a Cu anode, crossed Göbel
+mirrors, and an image plate detector (Fuji) at a sample-detector
+distance of 1.005 m. All samples were measured at ambient
+temperature. The scattering of the solvent (water, methylcyclohexane) was used as the experimental background. Measurements of the Au@SiO2 core/shell nanoparticles were performed
+on the SAXS beamline at ChemMatCARS APS, Chicago. The
+beamline is equipped with a CCD detector (Bruker) and operates
+at a wavelength of λ ) 0.13 nm with a sample-detector distance
+of 1.87 m.
+3. Scattering Curves of Ordered Particle Systems
+For an isotropic two-phase system consisting of polydisperse
+particles (phase “1”) with scattering length b1 and volume
+fraction φ1 in a matrix (phase “2”) of scattering length b2 and
+a volume fraction φ2 ) 1 - φ1, separated by sharp interfaces,
+the scattered intensity per unit volume is given by 14-16,23
+
+I(q) ) (b1 - b2) FN(〈F (q)〉 + 〈F(q)〉 [〈Z(q)〉 - 1]) (1)
+2
+
+2
+
+2
+
+where F(q)is the scattering amplitude or Fourier transform of
+the particle form, FN is the number density of the particles, and
+Z(q) is the lattice factor describing the spatial distribution of
+the particles. The variable q is the scattering vector given by q
+) 4π/λ sin (ϑ/2) where λ is the wavelength and ϑ is the
+scattering angle. The angular brackets 〈...〉 denote an average
+with respect to the particle size distribution and the spatial
+distribution of particles,13 which are assumed to be independent.
+This decoupling approximation allows one to factorize the
+scattering intensity into contributions from the particle form
+factor and particle structure factor. The decoupling approximation will break down for very polydisperse systems.24 For X-ray,
+neutron, and light scattering experiments, the scattering lengths
+bi have units of [m], which together with the unit of the number
+density FN (in [m-3]) yields for the scattered intensity the usual
+units of [m-1].
+3.1. Particle Form Factor. The particle form factor P(q) for
+spheres, cylinders, and lamellae or disks with cross-sectional
+radius R, length L and disk radius RD ) L (Figure 1) is given
+by
+
+Figure 1. Schematic presentation of different particle shapes, i.e.,
+spheres, cylinders, and disks or lamellae, with radius R, cylinder length
+L, and disk radius RD as considered in the text.
+
+where Fd|(L,q) is the longitudinal contribution parallel to the
+cylinder axis or normal to the lamella and Fd⊥ (R,q) is the
+contribution from the cross-section of the particle. The variable
+d is the dimensionality of the particles, i.e., d ) 1 for lamellae
+or bilayers, d ) 2 for cylinders, and d ) 3 for spheres. Since
+spheres are isotropic, the factorization may be formally introduced by setting F3|(L,q) ) 1 (see Table 1). The factorization
+for cylinders and lamellae is a good approximation for high
+aspect ratios, i.e., if L,RD > 10R, which is most often the case
+for lyotropic liquid crystalline phases and mesoscopically
+ordered materials derived therefrom.
+The cross-sectional scattering amplitude Fd⊥ (R,q) of a
+d-dimensional homogeneous particle is given by
+
+Fd⊥ (R,q) ) 0F1
+
+[
+
+]
+
+2 2
+
+d+2 q R
+;2
+4
+
+(4)
+
+where 0F1[b1;x] is the hypergeometric function whose definition
+and properties are outlined in the Appendix. For spheres,
+cylinders, and lamellae it reduces to simpler functions given in
+Table 1. The square of Fd⊥ (R,q) is also a hypergeometric
+function, i.e.
+
+[d +2 1, d +2 2, d + 1; -q R ]
+
+2
+(R,q) ) 1F2
+F d⊥
+
+2 2
+
+(5)
+
+The general expressions in eqs 4 and 5 are convenient for the
+2
+calculation of the averages 〈Fd⊥(R,q)〉 and 〈F d⊥
+(R,q)〉. The
+longitudinal scattering amplitudes Fd | (L,q) can be obtained from
+eqs 4 and 5 by substituting d f 3 - d, i.e.,
+
+[
+
+Fd | (L,q) ) 0F1
+
+]
+
+2 2
+
+5-d q L
+;, d ) 1,2
+2
+4
+
+(6)
+
+except in the case of spheres (d ) 3), where F3|(q) ) 1.
+Similarly, the square of the longitudinal scattering amplitudes
+is given by
+
+[4 -2 d,5 -2 d,4 - d; -q L ], d ) 1,2 (7)
+
+F d2 | (L,q) ) 1F2
+
+2 2
+
+These functions reduce to simpler functions as given in Table
+1. The form factors P(q) have the asymptotes
+
+lim q4P(q) ) Pd ∞
+
+qf∞
+
+(8)
+
+The scattering amplitude F(L,R,q) for long cylindrical and sheetlike particles can be factorized into
+
+where the Pd ∞ are also given in Table 1 together with the particle
+volumes Vdp.
+3.2. Particle Size Distribution. The particle size distribution
+can be taken into account by averaging the form factor P(L,R,q)
+over independent size distributions with respect to L and R,
+yielding
+
+F(L,R,q) ) Fd|(L,q)Fd⊥ (R,q)
+
+2
+(R,q)〉
+〈P(L,R,q)〉 ) 〈F d2 | (L,q)〉〈F d⊥
+
+P(L,R,q) ) F2(L,R,q)
+
+(2)
+
+(3)
+
+(9)
+
+Scattering Curves of Ordered Mesoscopic Materials
+
+J. Phys. Chem. B, Vol. 109, No. 4, 2005 1349
+
+TABLE 1: Dimensionality d, Longitudinal Form Factor Fd|(q), Cross-Sectional Form Factor Fd⊥(q), Averages 〈Fd | (q)〉, 〈Fd⊥(q)〉,
+2
+(q)〉 for a Schulz-Zimm Distribution, Orientationally Averaged Longitudinal Part F d2 | (q)or, Zeros zn of the
+〈F d2 | (q)〉, and 〈F d⊥
+2
+Cross-Sectional Form Factor F d⊥
+(q), High-q Limit of the Form Factor P(q) and Particle Volume Vdp for Different Particle
+Shapes
+lamellae
+
+cylinders
+
+spheres
+
+d
+Fd|(q)
+Fd⊥(q)
+〈Fd|(q)〉
+〈Fd⊥ (q)〉
+2
+〈F d|
+(q)〉
+2
+〈F d⊥
+(q)〉
+
+1
+2J1(qRD)/(qRD)
+sin (qR)/(qR)
+2
+2
+2F1[(z + 1)/2,(z + 2)/2,2; - q RDz ]
+〈sin (qR)/(qR)〉
+2
+2
+3F2[3/2,(z + 1)/2,(z + 2)/2,2,3; - 4q RDz ]
+〈sin 2(qR)/(qR)2〉
+
+2
+sin (qL/2)/(qL/2)
+2J1(qR)/(qR)
+〈sin (qL/2)/(qL/2)〉
+2 2
+2F1[(z + 1)/2,(z + 2)/2,2; - q Rz ]
+2
+2
+〈sin (qL/2)/(qL/2) 〉
+3
+2 2
+3F2[ /2,(z + 1)/2,(z + 2)/2,2,3; - 4q Rz ]
+
+2
+(q)or
+F d|
+zn
+
+(2/(qRD)2)(1 - J1(2qRD)/(qRD))
+qR ) nπ
+zn/z1 ) 1, 2, 3, 4, 5, ...
+1/(RD2R2)
+2πRD2R
+
+(2/(qL))Si(qL) - (sin (qL/2)/(qL/2))2
+qR ) nπ + ζ, ζ ≈ 0.69467...
+zn/z1 ) 1, 1.83, 2.65, 3.48, 4.30
+4/(LR3)
+πR2L
+
+3
+1
+(3/(qR)3)(sin (qR) - qRcos(qR))
+1
+3(〈sin(qR)/(qR)3〉 - 〈cos(qR)/(qR)2〉)
+1
+9(〈sin2(qR)/(qR)6〉 - 2〈sin (qR)cos(qR)/(qR)5〉 +
+〈cos2(qR)/(qR)4〉)
+1
+qR ) nπ + π/2
+zn/z1 ) 1, 1.71, 2.42, 3.12, 3.83, ...
+9/(2R4)
+4π/(3R3)
+
+Pd∞
+Vdp
+
+In most cases, the Schulz-Zimm distribution is used, which
+for a function f(X,q) with X ) L,RD,R yields
+
+〈f(X
+h ,q)〉 )
+
+∫0∞ f(X,q)h(X) dX
+
+(10)
+
+with
+
+h(X) )
+
+(z + 1)z+1Xz
+X
+h
+
+z+1
+
+Γ(z + 1)
+
+[
+
+exp - (z + 1)
+
+]
+
+X
+X
+h
+
+(11)
+
+with the average X
+h and the relative standard deviation σX )
+(z + 1)-1/2. The distribution is normalized such that ∫∞0 h(X) dX
+) 1. The averages for the particle cross-sectional scattering
+amplitudes for a given dimensionality d are
+
+〈Fd⊥ (q)〉 )
+
+[
+
+2 2
+
+[
+
+2F1
+2
+(q)〉 )
+〈F d⊥
+
+]
+
+∫0∞ 0F1 d +2 2; - q 4R h(R) dR )
+
+]
+
+z+1z+2d+2
+,
+,
+; -q2R2z (12)
+2
+2
+2
+
+∫0∞ 1F2[d +2 1,d +2 2,d + 1, -q2R2]h(R) dR )
+
+[
+
+3F 2
+
+d+1z+1z+2d+2
+,
+,
+,
+,d + 1; - 4q2R2z (13)
+2
+2
+2
+2
+
+]
+
+with Rz ) R
+h /(z + 1). The derivation is given in the Appendix.
+In the case d ) 1,3 (lamellae, spheres), these expressions reduce
+to simpler expressions as given in Table 1 and in the Appendix.
+In the case of d ) 2 (cylinders), there are no simpler analytical
+expressions.
+The averages for the longitudinal scattering amplitudes for
+dimensionalities d ) 1,2 can again be obtained by substituting
+d f 3 - d, i.e.,
+
+[
+[
+
+]
+
+5 - d q2L2
+〈Fd | (q)〉 ) 0 0F1
+h(L) dL )
+;2
+4
+z+1z+25-d
+,
+,
+; -q2L
+h 2 , d ) 1,2 (14)
+2 F1
+2
+2
+2
+
+∫
+
+∞
+
+〈F d2 | (q)〉 )
+
+]
+
+∫0∞ 1F2[4 -2 d,5 -2 d,4 - d, -q2L2]h(L) dL )
+
+[4 -2 d,z +2 1,z +2 2,5 -2 d,4 - d; - 4q Lh ], d ) 1,2 (15)
+
+3F2
+
+2 2
+
+with Lz ) L
+h /(z + 1). In the case of spheres (d ) 3), the longitudinal scattering amplitudes are equal to unity. The expressions
+for spheres, cylinders, and lamellae are summarized in Table 1.
+
+Figure 2. Ratio β(q) (eq 16) for spheres (d ) 3, σR ) 0.05), cylinders
+(d ) 2, σR ) 0.10), and disks (d ) 1, σR ) 0.15) with a radius R ) 15
+nm. The dashed lines are the Gaussian approximations for the
+nonoscillating decay (eq 17).
+
+Whereas the polydispersity in particle diameter R has a
+pronounced influence on the scattering curves in the range of
+scattering vectors q > 2π/a, where a is the lattice spacing,
+polydispersities for large cylinder lengths L or disk radii RD
+have little influence. Throughout the following calculations we
+approximate 〈Fd | (L,q)〉 ) Fd | (L,q) and 〈F d2 | (L,q)〉 ) F d2 | (L,q)
+and use only the orientationally averaged longitudinal part
+F d2 | (L,q)or as given in Table 1.
+For the calculation of the scattered intensity in eq 1, the ratio
+
+β(q) )
+
+〈Fd (q)〉2
+〈F 2d (q)〉
+
+)
+
+〈Fd⊥(R,q)〉2
+2
+〈F d⊥
+(R,q)〉
+
+(16)
+
+is needed. The case for d ) 3 has been previously derived in
+ref 23. The effect of this ratio on the scattered intensity can be
+inferred from the asymptotic expansion of the hypergeometric
+functions for large z(small σR).25 The expansion consists of
+an oscillating part and a nonoscillating part, e-(z+1)q2Rz2, which
+yields as an approximation for the nonoscillating contribution
+
+β(q) ≈ e-σR R q
+
+2 2 2
+
+(17)
+
+Figure 2 compares β(q) (eq 16) with the Gaussian approximation of the nonoscillating part in eq 17. It describes the
+
+1350 J. Phys. Chem. B, Vol. 109, No. 4, 2005
+
+Förster et al.
+
+Figure 3. Schematic presentation of core/shell particles with core radius Rc, overall radius Rm, core density Fc and shell density Fs. The shell
+density profile decays as r-R.
+
+nonoscillating decay of the ratio β(q) for different particle
+dimensionalities and low polydispersities (σR < 0.3). The
+expression is similar to the Debye-Waller factor eσa2ja2q2
+introduced below for the lattice point correlations and similarly
+results in a decay of the Bragg intensities with increasing q.
+3.3. Core/Shell Particles. In many cases, colloidal particles
+have a core/shell structure as schematically shown in Figure 3.
+Examples are surfactant, lipid and block copolymer micelles
+with hydrophobic cores and hydrophilic headgroups or polymer
+layers, or core/shell nanoparticles. Similarly, particles in ordered
+nanocomposites or pores in mesoporous materials may be coated
+by a layer of a different material and therefore can be considered
+to have a core/shell structure. The structure of the outer layer
+can in many cases be described by an algebraic density profile
+of the form φ(r) ) r-R.17 For a homogeneous layer we have R
+) 0, whereas for dense d-dimensional polymer layers or brushes
+theories predict R ) 2(d - 1)/3,26 i.e., φ(r) ) r0 for planar
+brushes or homogeneous domains, φ(r) ) r-2/3 for cylindrical
+brushes, and φ(r) ) r-3/4 for spherical brushes. This type of
+r-R scaling has been experimentally verified for spherical block
+copolymer micelles.27
+The density profile for a lamellar, cylindrical, or spherical
+core/shell particles with a homogeneous core and an r-R density
+profile (Figure 3) can be written as
+
+{
+
+φ c,
+
+()
+
+r
+φ(r) ) φs ) φcs
+Rc
+0,
+
+-R
+
+for 0 e r < R1 ) Rc
+
+(core)
+
+, for Rc e r < R2 ) Rm (shell)
+for Rm e r
+
+(18)
+
+where φc is the volume fraction of the core, φcs is the volume
+fraction of the shell at the core/shell interface, φs(r) is the volume
+fraction of the shell, Rc the core radius, and Rm the total radius
+of the core/shell particle. The scattering length of the core and
+the shell are given by b1c ) (b01c - b2)φc and b1s ) (b01s b2)φs, where b01c is the scattering length of the core material
+
+and b01s is the scattering length of the shell material, respectively. Since the scattering lengths b01c and b01s can be smaller
+as the scattering length of the solvent b2, the scattering lengths
+of the core and shell b1c and b1s can be negative. This is
+frequently the case in X-ray scattering of amphiphilic systems,
+where the hydrophobic core has a smaller electron density
+compared to water as the solvent.
+The scattering amplitude corresponding to eq 18 is given by17
+
+Fd⊥(q) )
+
+[
+
+]
+
+F
+FpR-d
+1
+Fd (0,Rc,q) Fd (R,Rc,q) +
+F (R,Rm,q)
+d
+(d - R)
+(d - R) d
+
+[
+
+1
+
+-
+
+d
+
+]
+
+FpR-d
+F
++
+(d - R) (d - R)
+
+(19)
+
+where
+
+Fd (R,R,q) ) 1F2
+
+[
+
+]
+
+d - R d d + 2 - R q2R2
+, ,
+;2 2
+2
+4
+
+(20)
+
+and F ) [(b01s - b2)φcs]/[(b01c - b2)φc] and p ) Rc/Rm. For
+homogeneous shells of constant density (R ) 0), eq 20 reduces
+to
+
+[
+
+[
+
+]
+
+2 2
+
+q Rc
+(d + 2)
+;+
+2
+4
+2 2
+(d + 2) q Rm
+[1 - F(1 - p-d)] (21)
+Fp-d0F1
+;2
+4
+
+Fd⊥(q) ) (1 - F)0F1
+
+[
+
+]] /
+
+for which the respective expressions 0F1[x] for spheres, cylinders, and lamellae have been compiled in Table 1. For
+homogeneous particles (p ) 1 or F ) 1), eq 21 reduces further
+to Fd⊥(Rm,q), and for F ) 0 to Fd⊥(Rc,q) given in eq 4.
+
+Scattering Curves of Ordered Mesoscopic Materials
+
+J. Phys. Chem. B, Vol. 109, No. 4, 2005 1351
+
+TABLE 2: Symmetry Factors fhkl for Different Lattice Types
+lattice
+
+allowed reflections
+
+LAM
+HEX (P/6mm)
+SQ (P/4mm)
+SC (Pm3m)
+BCC (Im3m)
+FCC (Fm3m)
+
+fhkl ) 1 for all reflections
+fhkl ) 1 for all reflections
+fhkl ) 1 for all reflections
+fhkl ) 1 for all reflections
+fhkl ) 2 for h + k + l ) even
+fhkl ) 4 for (h ∧ k ∧ l) even
+fhkl ) 4 for (h ∧ k ∧ l) odd
+fhkl ) 2 for (h + 2k ) 3n) with l even
+fhkl ) x3 for (h + 2k ) 3n + 1) ∨ (h + 2k ) 3n + 2) with l odd
+fhkl ) 1 for (h + 2k ) 3n + 1) ∨ (h + 2k ) 3n + 2) with l even
+
+HCP (P6/mmc)
+
+TABLE 3: Number of Particles per Unit Cell n, Volume of the Unit Cell Vd, Projected d-Dimensional Volume Wd (eq 23),
+Particle Volume Fraction O ) Vdp/Vd, Maximum Volume Fraction Omax, Peak Multiplicities mhkl, Solid Angle Ωd (eq 23), and
+Nearest Neighbor Distance ja for Different Lattice Types
+lam
+
+hex (P6/mm)
+
+sq (P4/mm)
+
+bcc (Im3m)
+
+fcc (Fm3m)
+
+hcp (P6/mmc)
+
+sc (Pm3m)
+
+n
+Vd
+Vd
+φ
+φ
+mhkl
+
+1
+πRD2a
+a
+2R/a
+1
+mh ) 1
+
+1
+x3a2L/2
+x3a2/2
+2πR2/(x3a2)
+π/(2x3) ≈ 0.907
+mh0 ) 6
+mhh ) 6
+mhk ) 12
+
+1
+a2L
+a2
+πR2/a2
+π/4 ≈ 0.785
+mh0 ) 4
+mhh ) 4
+mhk ) 8
+
+2
+a3
+a3
+8πR3/(3a3)
+πx3/8 ≈ 0.680
+mh00 ) 6
+mhh0 ) 12
+mhhh ) 8
+mhk0 ) 24
+mhhk ) 24
+mhkl ) 48
+
+4
+a3
+a3
+16πR3/(3a3)
+πx2/6 ≈ 0.740
+mh00 ) 6
+mhh0 ) 12
+mhhh ) 8
+mhk0 ) 24
+mhhk ) 24
+mhkl ) 48
+
+1
+a3
+a3
+4πR3/(3a3)
+π/6 ≈ 0.524
+mh00 ) 6
+mhh0 ) 12
+mhhh ) 8
+mhk0 ) 24
+mhhk ) 24
+mhkl ) 48
+
+Ωd
+ja
+
+1
+a
+
+2π
+a
+
+2π
+a
+
+4π
+x3a/2
+
+4π
+x2a/2
+
+2
+x2a3
+x2a3
+8πR3/(3x2a3)
+π/(3x2) ≈ 0.740
+mh00 ) 6
+m00l ) 2
+mhh0 ) 6
+mhk0 ) 12
+m0kl ) 12
+mhhl ) 12
+mhkl ) 24
+4π
+a
+
+For the calculations of 〈Fd⊥(q)〉 for general R, the average is
+equal to
+
+[
+
+]
+
+d - R d d + 2 - R q2R2
+〈Fd (R,R,q)〉 ) 0 1F2
+h(R) dR
+, ,
+;2 2
+2
+4
+d-Rz+1z+2d+2-Rd
+,
+,
+,
+, ; -q2R2z
+) 3F2
+2
+2
+2
+2
+2
+(22)
+
+∫
+
+∞
+
+[
+
+]
+
+The asymptotic expansions at large q for the calculation of the
+2
+averages 〈Fd⊥(q)〉2 and 〈F d⊥
+(q)〉 are given in the Appendix.
+Generally, the asymptotes of the form factors of core/shell
+structures exhibit no simple Porod laws as in eq 8.
+3.4. Lattice Factor. Using the Miller indices (hkl) for a
+given crystal lattice plane, the lattice factor for an ideal
+undistorted lattice, Z0(q), can be written according to Ruland
+and Wolff 15,16 as
+
+Z0(q) )
+
+(2π)d-1c
+nVd Ωd q
+
+d-1
+
+∑ mhkl f 2hklLhkl (q)
+
+4π
+a
+
+TABLE 4: Positions of the Reflections qhkl for Different
+Lattice Types
+lamellae (d)1)
+hexagonal (d)2)
+
+qh ) 2πh/a
+
+square (d)2)
+
+qhk ) 2πxh2 + k2/a
+
+cubic (d)3)
+hexagonal (d)3)
+
+qhk ) 4πxh2 + hk + k2/(x3a)
+qhkl ) 2πxh2 + k2 + l2/a
+
+qhkl ) 2πx4/3(h2 + hk + k2) + 3/8l2/a
+
+term a is the unit cell dimension and ja is the closest distance
+between next neighbors. The volume fraction is given by φ )
+Vdp/Vd; the maximum volume fraction φmax is obtained for R )
+ja/2. For hcp, the relation between the two unit cell dimensions
+of the hexagonal Bravais lattice is c ) x8/3a. The peak
+positions qhkl are given in Table 4. The crystal structures are
+depicted in Figure 4.
+
+(23)
+
+{hkl}
+
+where n is the number of particles per unit cell, fhkl is the
+symmetry factor that takes into account symmetry-related
+extinction rules (Table 2), Vd is the volume (d ) 3), surface
+(d ) 2), or long-period (d ) 1) of the d-dimensional unit
+cell, Ωd is the d-dimensional solid angle, and Lhkl(q) is a
+normalized peak shape function. The summation is over all sets
+of reflections {hkl} where mhkl is the corresponding peak
+multiplicity which, e.g., for a cubic phase in case of {hh0} is
+mhh0 ) 12 (corresponding to the reflections (hh0,hh0,hh0,hhh0;
+h0h,h0h,h0h,h0h;0hh,0hh,0hh,0hhh)). The term c is a constant
+of order unity whose exact value is calculated using the Porod
+invariant as outlined below. The values of these parameters for
+different crystal lattices (lam, sq, hex, sc, bcc, fcc, hcp) are given
+in Table 3 together with the volume of the unit cell, Vd. The
+
+Figure 4. Schematic presentation of different lattices with unit cell
+dimension a and c as considered in the text. SC ) simple cubic, BCC
+) body centered cubic, FCC ) face centered cubic, HCP ) hexagonally
+close packing, HEX ) 2D-hexagonal packing, SQ ) 2D-square
+packing, LAM ) 1D-packing.
+
+1352 J. Phys. Chem. B, Vol. 109, No. 4, 2005
+
+Förster et al.
+
+Figure 5. Peak shapes L(q) (eq 27) for different values of the peak
+shape parameter of ν ) 0.001 (gray dotted), 0.1 (black dotted), 0.2
+(gray dashed), 0.4 (black dashed), 1(gray solid) and 1000 (black solid)
+showing the evolution of the peak shape from Lorentzian to Gaussian.
+
+3.5. Lattice Disorder. For lattices with translational disorder
+where the displacements from the ideal lattice points are
+statistically independent (static disorder of the first kind), one
+can assume a Gaussian lattice point distribution with zero mean
+and a relative mean square displacement σ2a. In this case the
+lattice factor is given by28
+
+Z(q) ) Z0(q)G(q) + (1 - G(q))
+
+(24)
+
+where the first term, Z0(q)G(q), describes the decay of the
+intensity of the Bragg peaks, whereas the second term, 1 G(q), describes the concomitant increase of the diffuse scattering. G(q) is given by
+
+G(q) ) exp[-σ2aja2q2]
+
+(25)
+
+which is known as the Debye-Waller factor for thermal
+disorder. Here, ja is the next nearest neighbor distance between
+adjacent particles, which for different lattice types is given in
+Table 3. In the case of lamellar or bilayer systems, the relative
+displacement is related to the Caillé parameter η12,29 as
+
+η ) 8σ2a
+
+(26)
+
+which characterizes thermal displacement fluctuations in lipid
+bilayers. If the interlamellar forces are dominated by entropic
+undulations, the Caillé parameter has a value of η ) 4/3(1 2R/a)2, where 2R is the bilayer thickness.30 σa in eq 26 is
+comparable to the Hosemann g-factor, which describes the
+relative standard deviation of the mean distance between
+particles in paracrystal theory (static disorder of the second
+kind).
+3.6. Peak Shape. Lhkl(q) is a normalized peak shape function
+for which Lorentzian, Gaussian, pseudo-Voigt, or Pearson
+functions are commonly used.31 A general and versatile normalized peak shape function is adopted from a function given by
+Burger and Micha32 with
+
+Lhkl(q) )
+
+2
+
+∞
+
+(
+
+∏ 1+
+
+πδn ) 0
+
+γν2
+
+4x2
+
+(n + ν/2)2 π2δ2
+
+)
+
+-1
+
+(27)
+
+Figure 6. Schematic presentation of ideal lattices of monodisperse
+homogeneous (A) and core/shell particles (B), as well as distorted
+lattices of polydisperse homogeneous (C) and core/shell particles (D).
+Cases (C) and (D) are typical for ordered mesoscopic structures and
+are described by eq 30.
+
+where x ) (q - qhkl) and
+
+γν ) π1/2
+
+Γ[(ν + 1)/2]
+Γ[ν/2]
+
+∞
+The peak shape is normalized such that ∫-∞
+Lhkl(q)dq ) 1.
+Here, qhkl is the peak position and δ the peak width which can
+be related to the domain size D of the ordered domain via the
+Debye-Scherrer equation D ) 2π/δ. This peak shape function
+is convenient since by adjusting the parameter ν the peak shape
+can be continuously varied between a Lorentzian (ν f 0) and
+a Gaussian (ν f ∞), i.e.,
+
+Lhkl(x) )
+
+{ []
+δ/2π
+x2 + (δ/2)2
+
+for ν f 0 (Lorentzian)
+
+2
+4x2
+exp - 2 for ν f ∞ (Gaussian)
+πδ
+πδ
+
+(28)
+
+where, in case of the Lorentzian, δ is equal to the full width at
+half-maximum (fwhm), whereas in case of a Gaussian δ is
+related to the standard deviation as σ ) xπ/8δ. Inserting eq 24
+into eq 1 yields for the scattered intensity
+
+I(q) ) (b1 - b2)2FNP(q)[1 + β(q)(Z0(q) - 1)G(q)] (29)
+which can be rewritten as
+
+I(q) ) (b1 - b2)2FNP(q)S(q)
+S(q) ) 1 + β(q)(Z0(q) - 1)G(q)
+
+(30)
+
+where S(q)is the structure factor. This approach considers the
+effect of the particles (via their first and second moment of the
+particle size distribution) and of the lattice (via the first and
+second moment of the distribution of lattice points) on the
+scattered intensity I(q). The particle size and lattice point
+distribution is schematically depicted in Figure 6. According
+to eqs 17 and 25, both effects lead to damping of the higher
+
+Scattering Curves of Ordered Mesoscopic Materials
+
+J. Phys. Chem. B, Vol. 109, No. 4, 2005 1353
+
+order Bragg reflections by a factor e-(σa2ja2+σR2R2)q2, with additional suppression of Bragg reflections at the zeroes of β(q).
+The additivity of both contributions in the argument of the
+exponential decay results from the assumption of their statistical
+independence.
+It is straightforward to consider also other polymer or colloid
+structures with their respective form factors P(q) and structure
+factors Z0(q) which, e.g., are well compiled in a review by
+Pedersen.33
+3.7. Grazing Incidence Scattering (GISAXS). Eq 30 also
+allows one to describe the 2-dimensional in-plane order of
+mesoscopically structured thin films or monolayers. The inplane order can be derived from the diffuse scattering intensity
+of grazing incidence small-angle X-ray (GISAXS) or neutron
+scattering (GISANS) patterns.34 The total detected intensity is
+given by the sum of the specularly reflected intensity, the
+intensity scattered due to the surface roughness, and the diffuse
+scattering, which is related to the density fluctuations in the
+bulk of the thin film. The diffuse scattering is given by35
+
+Id(q) )
+
+k cC
+
+|Ti| |Tf | Idiff (q)
+(4πr2)
+2
+
+2
+
+∫0 I(q)q dq ) 2π φ(1 - φ)
+2
+
+2
+
+(32)
+
+(33)
+
+where q ) xq2xy + q2z , in agreement with ref 35.
+Thus, the description of ordered domains using eq 30 is
+applicable not only to the scattering of bulk mesoscopic
+materials but also to the in-plane scattering of thin films or
+monolayers. Such structures are of considerable relevance for
+the structuring of surfaces by lithography or self-assembly for
+catalysis, sensing, and electrooptical applications. It is straightforward to extend the description to multilayers by considering
+the respective reflections of the structure factor S(qxy,qz). By
+further consideration of the Fresnel transmission functions T(qz)-
+
+(b1 - b2)2
+Vpd2
+
+(34)
+
+which is the total scattering length of the sample. Porod’s
+invariant is related to the asymptotic behavior of the scattered
+intensity at high q, i.e.,
+
+Q)
+
+π
+l (b - b2)2FN lim q4P(q)S(q)
+qf∞
+4 p 1
+
+(35)
+
+where lp is the Porod length or chord length which is related to
+the surface per unit volume as
+
+(31)
+
+Thereby, the in-plane order of thin films as measured by grazing
+incidence out-of-plane scans can be described for hexagonal or
+square arrangements of cylindrical domains having a homogeneous or core/shell structure. Because of the particular orientation of the cylinders (the long axis being in z-direction, the
+cross-section in the xy-plane) the factorization in eq 3 is valid
+for any axial ratio of the cylinder, in particular also for disks,
+where L , R. The in-plane form factor has an asymptote of
+2
+lim 〈F 2⊥
+(qR)〉 ) 4/π(qR)-3, so that a characteristic q-3 scaling
+qf∞
+is expected for out-of-plane scans of domains with spherical
+cross-sections.
+In the case of spherical particles, the form factor contribution
+to the diffuse scattering is isotropic and given by
+2
+(qR)〉
+P3(qxy,qz) ) 〈F 3⊥
+
+Q)
+
+∞
+
+lp )
+
+where kc is the vertical component of the momentum vector at
+the critical angle of total external reflection, C the illuminated
+area, T the Fresnel transmission coefficients of the incident and
+reflected waves, and Idiff(q) is the “diffuse structure factor”. With
+the film positioned in the xy-plane, the diffuse scattering has
+components along qxy (“out of plane of incidence”) and qz
+normal to the xy-plane. The scattering amplitude of cylindrical
+particles with their long axis normal to the xy-plane is then given
+by the cross-sectional contribution F2⊥(qxyR) and the longitudinal
+part F2 | (qzL). The diffuse part of the scattering intensity is then
+given by Idiff(q) ) IN(q) where the form factor P(q)in eq 30 is
+given by
+2
+(qxy R)〉 〈F 22 | (qzL)〉
+P2(qxy,qz) ) 〈F 2⊥
+
+of the thin film, the complete GISAXS or GISANS pattern can
+be calculated.
+3.8. Integral Scattered Intensity. For two-phase systems,
+the factor c in eq 23 ensures that the integral scattered intensity
+as characterized by the Porod invariant Q is given by
+
+4φ(1 - φ)
+SV
+
+(36)
+
+This relation is rigorous for any microphase-separated system
+as long as the interface is sharp. For some materials, e.g.,
+polymeric systems, interfaces can be relatively diffuse, so that
+this relation may not be applicable. As outlined above, core/
+shell particles do not in general have a simple Porod behavior,
+so that the following arguments apply only for homogeneous
+two-phase systems.
+In the case of homogeneous two-phase systems with sharp
+interfaces with a given dimensionality d, the surface per unit
+volume is given by
+
+SV )
+
+dφ
+R
+
+(37)
+
+from which the specific surface area Asp (in m2/g) for a
+mesoporous material with wall- or matrix density Fsp can be
+calculated as
+
+Asp )
+
+SV
+(1 - φ)Fsp
+
+(38)
+
+For q f ∞, the Debye-Waller factor approaches G(q) f 0,
+so that S(q) f 1, and the corresponding limit for the scattered
+intensity is given by lim I(q) ) Pd∞q-4, with Pd∞ given in
+qf∞
+Table 1. Combining eqs 34-37 and inserting for the particle
+density FN ) n/Vd, i.e., the number of particles per unit cell,
+we obtain a closure relation
+
+πRn
+(1 - φ)(b1 - b2)2Pd∞ )
+dVd
+
+∫0∞ IN(q)q2 dq
+
+(39)
+
+which determines the coefficient c of the lattice factor Z0(q) in
+eq 23. In the examples considered below, deviations from c )
+1 are only up to a few percent.
+3.9. Limiting Behavior for q f 0. In the thermodynamic
+limit q f 0, the scattering intensity is related to the fluctuation
+in particle number density δFN or the isothermal osmotic
+compressibility χT as
+
+lim Ĩ(q) ) 〈δFN2〉 ) kTχT FN
+qf0
+
+(40)
+
+where Ĩ(q) ) I(q) (F1 - F2)-2 F-1
+N and kT is the thermal energy.
+In the limit q f 0 the form factor P(q) (eq 2), the fluctuation
+
+1354 J. Phys. Chem. B, Vol. 109, No. 4, 2005
+
+Förster et al.
+
+term β(q) (eq 16), and the Debye-Waller factor G(q) (eq 30)
+all approch unity. Due to the q1-d singularity of the lattice factor
+Z0(q) (eq 23), the scattering intensity Ĩ(0) will diverge for the
+case of cylinders (d ) 2) and spheres (d ) 3), but not for
+lamellae (d ) 1). This parallels the behavior of the structure
+factor in paracrystal theory, where intensity upturns for qf0
+have been reported for spheres (three-dimensional paracrystal)
+but not for lamellae (one-dimensional paracrystal).9 In paracrystal theory, the upturn of a scattering curve at qf0 corresponds
+to the contribution of the zero-order scattering related to the
+finite size of the paracrystal. For the one-dimensional paracrystal, as q approaches zero, the intensity Z(q) continuously
+decreases to the limiting value of σ2a and the intensity upturn is
+not found. For the three-dimensional paracrystal there is an
+2
+intensity upturn to a value of σa,eff
+, which goes to infinity for a
+random orientation of paracrystals with spherically symmetric
+distortions of the lattice points.9 In eq 23, the q1-d singularity
+similarly occurs as a consequence of assuming a random
+orientation of the lattice, so that the angular average of the lattice
+factor in reciprocal space yields a factor of (2πq)-1 in the twodimensional, and a factor of (4πq2)-1 in the three-dimensional
+case. In eq 23, the zero-order peak is not explicitely considered
+because of the q1-d singularity and because its intensity depends
+also on the scattering length difference between the lattice inside
+and outside, which is a priori not known.
+Due to the singularity and since structural features on length
+scales d > a, such as packing defects, grain boundaries or
+fluctuations decaying on larger length scales are only indirectly
+considered via the domain size D, eq 30 is not expected to give
+good agreement with experimentally determined scattering
+curves in the range of scattering vectors q < 2π/a. However,
+for q g 2π/a, this approach describes remarkably well experimentally measured high-resolution scattering curves of mesoscopically ordered materials as will be shown and discussed
+below. The use of factorizations (eq 3) and quickly converging
+series expansions (eqs 4-7) facilitate computing and allow
+efficient implementation into fitting routines. It allows one to
+h ,σR,D,ν} from
+quickly extract the set of parameters {a,σa,R
+measured scattering curves involving spheres, cylinders, and
+bilayers or lamellae. In addition, the parameters {Rm,R,F} can
+be derived for core/shell systems. Parameters such as the
+cylinder length L or the disk radius RD are difficult to determine
+because for nearly all mesoscopically ordered materials L,RD
+. a. All curves are fitted using a Levenberg-Marquardt
+algorithm which quickly converges and allows one to obtain
+the relative error of the fit parameters. An executable trial
+version of the program can be obtained from the author (http://
+www.chemie.uni-hamburg.de/pc/sfoerster/software.html). The
+analysis allows also to take into account the contribution of the
+background scattering as
+
+Ĩ(q) ) Isample - kIsolvent
+
+(41)
+
+where the constant k is the ratio of the transmission of sample
+and solvent, assuming measuring times and primary beam
+intensity to be equal. If the constant k is unknown, it can be
+treated as an adjustable parameter. If no solvent or background
+data are available, a flat q-indpendent background can be
+subtracted. Geometrical resolution effects are not taken into
+account and are out of the scope of the present paper. They
+could be incorporated by convoluting the calculated scattering
+curve with the beam profile as outlined ref 33.
+We find that the fits to experimentally measured scattering
+curves are well comparable to approaches based on paracrystal
+theory in the case of cubic micellar structures, or based on the
+
+Figure 7. Calculated scattering curves I(q) (a) and structure factor
+S(q) (b) for a hexagonal lattice of cylinders with a ) 50 nm, L ) 500
+nm, R ) 15 nm, σR ) 0.1, D ) 500 nm, and mean displacements of
+σaja ) 1 (solid), 3 (dashed), 10 (dash-dotted), and 30 (dotted) nm with
+Lorentzian line shapes showing the suppression of higher order peaks
+with increasing displacement. The inset in (a) shows the characteristic
+q-4 envelope in the high-q regime (Porod law).
+
+Caillé approximations in case of lamellar structures, and allow
+to nearly quantitatively describe high-resolution synchrotron
+SAXS and SANS data of many different mesoscopically ordered
+materials.
+4. Results and Discussion
+4.1. Structure and Form Factor. The influence of both
+structure factor S(q) and form factor P(q) on the scattered
+intensity I(q) can be observed in Figure 7, where the scattered
+intensity I(q) for hexagonally packed cylinders for different
+values of the Debye-Waller factor are calculated. The form
+factor of the cylinders leads to a q-4 decay of the scattered
+intensity (Porod law, see inset in Figure 7a), which considerably
+weakens the scattered intensity in the high-q region. In the Porod
+regime, the form factor exhibits damped oscillations, whose
+positions, periodicity and amplitudes are characteristic for the
+particle size, shape, and polydispersity. Generally, the relative
+distances between minima increase in the order spheref
+cylinderflamellae (see Table 1). Higher order oscillations are
+damped due to particle polydispersity.
+The structure factor S(q) (Figure 7b) exhibits peaks that
+correspond to reflections characteristic for the symmetry and
+
+Scattering Curves of Ordered Mesoscopic Materials
+
+Figure 8. Synchrotron SAXS curve of Au@SiO2 core/shell particles
+that have assembled into core/shell superlayers. There is a set of eight
+major oscillations due to scattering of the core layer with smaller
+oscillations inbetween at lower q, due to core/shell interferences. The
+remarkably small polydispersity of the particles and the respective
+superlayer thickness (σR ) 0.03) leads to the large number of form
+factor oscillations. The minimum q-value of the instrumental setup is
+indicated.
+
+space group of the lattice (see Tables 2, 3, and 4). Different
+crystalline lattices have different relative positions of the higher
+order reflections. The peak width of the reflections is reciprocally related to the domain size of the ordered domain. The
+intensities of the higher-order reflections are damped due to
+deviations from the ideal lattice positions (Debye-Waller factor)
+and are suppressed at specific q-values due to minima of the
+fluctuation term β(q) (see Figure 2). The structure factor
+approaches S(q)f1 for q f ∞ and S(q) f ∞ for q f 0.
+Most of the structural variables discussed above, e.g., unit
+cell dimension and relative displacement, particle radius, and
+relative standards deviation, have a specific effect on the
+scattering curve, i.e., unit cell dimension a: position of the first
+reflection; lattice-type: relative position of higher-order reflections; root-mean-square displacement σa: damping of higherorder reflections; particle radius R: first minimum of oscillations; particle shape (sphere, cylinder, disk): relative position
+of higher order oscillations; particle polydispersity σR: damping
+of higher order oscillations; ordered domain size D: peak width;
+parameter ν: peak shape. This is favorable for the fitting of
+scattering curves to the expression of I(q) in eq 30. Since each
+fit parameter has a specific effect on the scattering curve, this
+leads in most cases to low values of the off-diagonal elements
+of the covariance matrix, which indicates reasonable statistical
+independence.
+Additional features in the scattering curve can arise in the
+case of core/shell particles, where additional oscillations from
+the particle shell and core/shell interference terms depending
+on the total radius Rm, shell/core scattering length ratio F, and
+the density profile scaling parameter R, can be observed.
+Furthermore, core/shell structures can lead to a suppression of
+the scattered intensity at intermediate q, when the contrast
+density of core and shell have opposite signs. This will be
+discussed below for SAXS curves of hexagonally packed
+cylinders in a lyotropic liquid crystalline phase.
+4.2. Core/Shell Nanoparticles. Figure 8 shows the high q
+part of a synchrotron SAXS curve of Au@SiO2 core/shell
+nanoparticles. The nanoparticles have a Au core with diameter
+
+J. Phys. Chem. B, Vol. 109, No. 4, 2005 1355
+
+Figure 9. Comparison of measured and fitted SAXS curves for a PSPI (a, ref 10; b, ref 36) and a lyotropic phase of PI-PEO-9 in
+methylcyclohexane (c). The gray lines are best fits to paracrystal theory
+(taken from 10 and 36). The black lines are fits to eq 30. The quality
+of the description for both models is well comparable. The fit parameters
+are summarized in Table 5.
+
+15 nm and a thick SiO2 shell with a total particle diameter of
+75 nm. Interestingly, the nanoparticles assemble into layers
+giving rise to a scattering curve which can be nearly quantitatively described by a planar core/shell layer with a total diameter
+of 2Rm ) 68.2 nm, a core diameter of 2Rc ) 13.7 nm, and an
+electron density ratio of shell/core F ) 0.30 with a nearly
+homogeneous shell (R ) 0.042). The large number of oscillations indicate that the polydispersity of the layer thickness is
+very low, i.e., σR ) 0.030. The eight main oscillations are due
+to the high-density core of the layer. The sharp oscillations
+between the main oscillations at low q are due to core/shell
+interferences. This shows that eqs 18 and 19 give a good
+description of the form factor of core/shell structures. The
+arrangement of the nanoparticles into layers occurs as a
+consequence of the sample preparation (sol/gel reaction under
+centrifugation) and is further supported by scanning electron
+microscopy.22
+4.3. bcc Structures: Comparison to Paracrystal Theory.
+Figure 9a shows the SAXS curve of a PS-PI block copolymer
+(Mn ) 21.9 × 104 g/mol, 15.4 wt % PI) where spherical PI
+domains are arranged on a bcc lattice.10 The first three
+reflections, (110), (200), and (211), are clearly observed,
+followed by three form factor oscillations at higher q. The
+oscillations can well be described yielding the radius and
+polydispersity of the PI spheres. The positions, intensities,
+widths, and shapes of the reflections are well captured by the
+fit to eq 30 (black line) and are comparable or even better than
+the description by paracrystal theory (gray line). The results of
+paracrystal theory and fits to eq 30 considering particle radius,
+standard deviation, mean deviation, and unit cell dimensions
+are the same within experimental error and are summarized in
+Table 5.
+Figure 9b shows a SAXS curve of another PS-PI block
+copolymer (Mn ) 17.6 × 104 g/mol, 15.0 wt % PI), where also
+in this case spherical PI domains are arranged on a bcc lattice.36
+The first three reflections are well observed, followed by three
+form factor oscillations at higher q. The gray line is the fit using
+paracrystal theory.36 The data can also be well described by
+using eq 30 (black line), however, with a slightly poorer fit.
+The parameters for the paracrystal fit36 and the parameters
+
+1356 J. Phys. Chem. B, Vol. 109, No. 4, 2005
+
+Förster et al.
+
+TABLE 5: Figure and Reference, Lattice Type, Lattice Constant a, Particle (core) Radius R
+h c, Relative Standard Deviation of
+Particle Radius (polydispersity) σR, Total Particle Radius R
+h m, Density Profile Exponent r, Shell/Core-Scattering Length Ratio
+Gi, Domain Size D, Mean Lattice Deviation ∆ ) jaσa, Caillé Parameter η, Peak Shape Parameter ν and Calculated Volume
+Fraction O for the Scattering Curves Shown in Figures 8-13, Compared to the Parameters Derived from Paracrystal and Caillé
+Models
+Figure
+
+8
+
+9a
+
+9a
+
+9b
+
+9b
+
+9c
+
+10a
+
+10a
+
+10b
+
+10b
+
+10c
+
+sample
+fit/ref
+lattice
+a (nm)
+R
+h c (nm)
+σR
+R
+h m (nm)
+R
+Fi
+D (nm)
+∆ (nm)
+η
+ν
+φ
+
+Au/SiO2
+eq 30
+6.85
+0.03
+34.1
+0.042
+0.300
+-
+
+PS-PI
+eq 30
+BCC
+57.8
+13.6
+0.091
+492.3
+5.21
+Gauss
+0.111
+
+PS-PI
+ref 10
+BCC
+56.7
+13.1
+0.1
+5.67
+0.099
+
+PS-PI
+eq 30
+BCC
+51.5
+12.6
+0.091
+533.2
+6.17
+Gauss
+0.123
+
+PS-PI
+ref 36
+BCC
+48.9
+12.6
+0.079
+4.23
+
+PI-PEO
+eq 30
+BCC
+36.58
+5.55
+0.141
+13.56
+0.11
+0.066
+192.8
+3.11
+0.21
+-
+
+DDAB
+eq 30
+Lam
+52.96
+1.26
+0.132
+205.1
+7.254
+0.16
+1.98
+0.047
+
+DDAB
+ref 12
+Lam
+1.23
+0.16
+0.040
+
+AOT
+eq 30
+Lam
+8.25
+0.88
+0.213
+42.16
+1.43
+0.26
+Gauss
+0.212
+
+AOT
+ref 12
+Lam
+0.80
+0.25
+0.20
+
+PI-PEO
+eq 30
+Lam
+29.07
+6.9
+0.084
+254.8
+1.3
+0.016
+0.087
+0.475
+
+Figure
+
+11
+
+11
+
+11
+
+11
+
+11
+
+11
+
+12a
+
+12b
+
+12c
+
+12d
+
+13a
+
+13b
+
+sample
+fit/ref.
+lattice
+a (nm)
+R
+h c (nm)
+σR
+R
+h m (nm)
+R
+Fi
+D (nm)
+∆ (nm)
+η
+ν
+φ
+
+5%
+eq 30
+Hex
+32.82
+6.75
+0.083
+11.49
+0.049
+-0.373
+64.2
+3.13
+55.1
+-
+
+15%
+eq 30
+Hex
+30.06
+6.60
+0.062
+11.75
+0.27
+-0.275
+171.1
+1.28
+1.32
+-
+
+25%
+eq 30
+Hex
+29.11
+6.78
+0.086
+11.0
+0.36
+-0.308
+199.9
+1.25
+0.56
+-
+
+35%
+eq 30
+Hex
+27.46
+6.82
+0.086
+10.80
+0.06
+-0.251
+143.2
+1.32
+0.30
+-
+
+45%
+eq 30
+Hex
+25.60
+7.12
+0.061
+215.5
+1.30
+0.37
+-
+
+55%
+eq 30
+Hex
+24.81
+7.33
+0.071
+195.0
+1.63
+0.76
+-
+
+40%
+eq 30
+Hex
+32.6
+8.44
+0.077
+100.0
+2.36
+
+hybrid
+eq 30
+Hex
+25.5
+8.30
+0.09
+90
+2.5
+0.38
+0.384
+
+SiO2
+eq 30
+Hex
+22.3
+7.33
+0.07
+100
+2.1
+0.39
+0.392
+
+hybrid
+eq 30
+FCC
+34.5
+9.62
+0.072
+134.0
+1.56
+Gauss
+0.362
+
+PS-PI
+eq 27
+2D-Hex
+168.0
+65.6
+0.30
+354.8
+17.7
+Gauss
+-
+
+PS-PI
+eq 27
+2D-Hex
+(780)
+48.3
+0.30
+60.0
+40.0
+Lorentz
+-
+
+0.14
+
+obtained from the fit to eq 30 are the same within experimental
+error and are summarized in Table 5.
+Figure 9c shows a synchrotron SAXS curve of an inverse
+micellar phase of PI-PEO-2 in methylcyclohexane where PEO
+micelles are arranged on a bcc lattice. The first seven reflections
+[(110), (200), (211), (220), (310), (222), and (321)] are well
+observed. The damped oscillation due to the form factor can
+be well described, as are the positions, intensities, widths, and
+shapes of the peaks. The fit parameters are summarized in Table
+5. The deviations at low q, where the experimental scattering
+curve increases whereas the calculated curves decrease, are due
+to structural features on length scales d > 2π/q, which are not
+included in the current model.
+4.4. Lamellar Structures: Comparison to Caillé Theory.
+Figure 10 shows SANS curves of two bilayer-forming surfactant
+systems: (a) DDAB/D2O at a volume fraction of φ ) 0.04,
+and (b) AOT/D2O at a volume fraction of φ ) 0.20. In the first
+case, the first three and in the latter case the first two reflections
+of the arrangement of bilayers are visible. For curve (a) at higher
+q there is a strong decay with an oscillation at q ≈ 0.2-0.3
+nm-1 characteristic for the local bilayer structures. Peak
+intensities, shapes, positions, and widths can be well described
+by eq 30. The fitted curve (black line) compares well with the
+data and the description by the Caillé model (gray line); at low
+q the description with eq 30 is even better. Fit parameters such
+as bilayer thickness, unit cell dimension, and Caillé parameters
+are summarized in Table 5. The Caillé parameters calculated
+with eq 26 are η ) 0.26 for AOT/D2O and η ) 0.15 for the
+DDAB/D2O system, which compare well with the values
+obtained by Nallet et al., which is η ) 0.25 and η ) 0.16,
+respectively. Also the bilayer thicknesses of 1.75 for AOT and
+2.52 nm for DDAB are in good agreement with the values
+determined using the Caillé model, being 1.60 and 2.46 nm.12
+
+Gauss
+0.243
+
+Figure 10. Comparison of measured and fitted SANS curves for
+lamellar phases of DDAB/D2O (a) and AOT/D2O (b) (both data taken
+from ref 12), together with a SAXS curve of a lamellar lyotropic phase
+of PI-PEO-3H2O (70 wt %) (c). The calculated scattering curves
+obtained by the Caillé model (gray lines, taken from ref 12) and fits to
+eq 30 (black lines) are also shown. The quality of the description for
+both models is well comparable. The fit parameters are summarized in
+Table 5.
+
+Figure 10c shows a synchrotron SAXS curve obtained from
+a lamellar lyotropic liquid crystal of a poly(isoprene-b-ethyleneoxide) (PI-PEO) block copolymer at a concentration of 60
+wt % in water. The scattering curve shows the first six reflections whose position, intensity, width, and shape can be well
+described. The parameters obtained from the fitted curve (black
+line) are summarized in Table 5.
+
+Scattering Curves of Ordered Mesoscopic Materials
+
+J. Phys. Chem. B, Vol. 109, No. 4, 2005 1357
+
+Figure 11. Comparison of measured and fitted synchrotron SAXS
+curves of block copolymer lyotropic liquid crystals (PB-PEO-16,
+hexagonal phase) for polymer concentrations of 5, 15, 25, 35, 45, and
+55%. Over the complete concentration range the scattering curves can
+be well described by using eq 30. The fit parameters are summarized
+in Table 5.
+
+Figure 12. Comparison of measured and fitted SAXS curves for a
+hexagonal lyotropic phase of PI-PEO-11 (a), the corresponding
+polymer/silica hybrid (b), and the mesoporous silica (c) prepared
+therefrom. Also shown is the SAXS curve of a fcc-polymer/silica hybrid
+(d) prepared from an fcc-lyotropic block copolymer phase. Solid lines
+are fits to eq 30 with the fit parameters given in Table 5.
+
+4.5. Hexagonal Lyotropic Phases. Figure 11 shows a series
+of synchrotron SAXS curves of poly(butadiene-b-ethyleneoxide)
+(PB-PEO-16) in water, where the block copolymer forms
+cylindrical micelles. At the lowest concentration (5 wt %
+polymer) the scattering curve is dominated by the form factor
+exhibiting two oscillations, with a slight suppression of the
+scattering intensity at low q due to short-range intermicellar
+correlations. For concentrations of 15 wt % and above, the
+scattering intensity is dominated by the structure factor of the
+hexagonal liquid crystalline phase. The intensity is considerably
+suppressed at q ≈ 0.6 nm-1 and q ≈ 1.0 nm-1 due to the minima
+of the form factor. With increasing concentration, the peaks are
+systematically shifted to higher q values and higher order peaks
+become more intense. The scattering curves with the positions,
+intensities, and widths of the reflections can be well described
+and fitted (solid lines). The fit parameters are summarized in
+Table 5. Some deviations are observed around the (20)reflections for the two highest concentration, whose origins are
+currently not yet clear. Also, the shape of the intense first
+reflection at the highest concentration cannot be quantitatively
+described. However, other peak shape functions (modified
+Lorentzian 1 and 2, pseudo-Voigt, Pearson VII) gave even worse
+agreement with the experimental data.
+The fit parameters, given in Table 5, allow one to follow
+details of the structural evolution of the hexagonal phase with
+increasing polymer concentration. As expected, the unit cell
+dimension decreases with increasing concentration, but it is also
+observed that the core radius R of the cylindrical micelles significantly increases (from 6.7 to 7.3 nm) and that the size distribution becomes narrower (from 10% to 7% relative standard
+deviation). The PEO shells of the cylindrical micelles contribute
+notably to the scattered intensity at lower concentrations. Since
+micellar core and shell have lower and higher scattering length
+densities with respect to water, this leads to a negative ratio F
+(see Table 5) with a notable damping of the scattered intensity
+in the low q region. This effect is seen from the smaller intensity
+ratio of the first- to second-order peak at lower polymer
+concentrations.
+4.6. Nanohybrid and Mesoporous Structures. Figure 12
+shows SAXS curves measured with a rotating anode for the
+
+different stages of a sol/gel process that leads to the formation
+of an ordered mesoporous material from a lyotropic hexagonal
+phase. In this process, a silicious acid precursor, tetramethoxysilane (TMOS), is hydrolyzed and condensed in the aqueous
+domain of the hexagonal phase (Figure 12a) to obtain an ordered
+polymer/silica nanohybrid material (Figure 12b).1,2 The polymer
+is then removed by calcination to obtain the corresponding
+mesoporous material (Figure 12c). The scattering curves show
+peaks corresponding to the expected hexagonal packing and
+oscillations due to the form factor of the cylindrical micelles.
+The hexagonal order is preserved during the sol/gel process.
+Only the unit cell dimension is decreasing (32.6f25.5f22.3
+nm), as is the diameter of the PI cylindrical core, which later
+becomes the mesopore (8.44f8.30f7.33 nm). The calcination
+leads to a nearly affine shrinking of unit cell dimension and
+pore diameter. From the volume fraction φ ) 0.392 (Table 5)
+and the density of amorphous silica, FSiO2 ) 2.1 g/cm3, the
+specific surface area of the material can be calculated (eq 38)
+i.e., ASiO2 ) 83.8 m2/g. This is a rather small value. Experimentally determined values using nitrogen adsorption often yield
+values that are of the order of several hundred m2/g, indicating
+the presence of a considerable amount of microporosity in such
+samples.37
+Also shown is an SAXS curve (Figure 12d) measured with
+a rotating anode of a polymer/silica nanohybrid material
+prepared from the fcc phase of a PEB-PEO block copolymer
+in water. The first two reflections of the fcc lattice are not
+resolved, so that the (200) reflection appears as a shoulder on
+the (111) reflection. Similarly, the (220), (222), and (311)
+reflections are smeared out to the second broad peak. Still, the
+peaks and oscillations can be quantitatively described by eq 30.
+The fit parameters are given in Table 5.
+Deviations between calculated and measured scattering curves
+are most prominent in the q-range around the first minimum of
+the form factor. In this q range, effects of both form factor and
+structure factor interfere, and the calculated scattered intensity
+critically depends on the peak shape function and the particle
+size distribution function. A better description would involve
+the consideration of defect structures, as well as higher moments
+
+1358 J. Phys. Chem. B, Vol. 109, No. 4, 2005
+
+Förster et al.
+part of the experimentally determined GISAXS pattern.34 Figure
+14b shows the calculated diffuse scattering pattern for the same
+cylinders with narrow disperse cross-sections and lengths, i.e.,
+σR ) 0.05 and σL ) 0.05 to illustrate the periodic oscillations
+due to the cylinder form factor.
+5. Conclusions
+
+Figure 13. GISAXS out-of-plane scans for a thin (A) and a thick (B)
+PS-PI block copolymer film (data taken from ref 34). Solid lines are
+fits using eq 30 with the 2D form factor of eq 32.
+
+of the lattice site and particle size distribution of such materials.
+Another extension of the model, which is being developed, is
+the consideration of orientation order that can be modeled by
+appropriate orientational distribution functions.38
+4.7. Mesoscopically Structured Thin Films. Figure 13
+shows out-of-plane scans of GISAXS patterns measured for a
+thin (a) and thick (b) poly(styrene-b-isoprene) (PS-PI) block
+copolymer film, which had been spin-coated on top of an oxidecovered Si substrate.34 These scans probe lateral structures in
+the film plane. The strong peak in Figure 13a indicates a regular
+two-dimensional distribution of domains within the film. The
+fit yields an interdomain distance of 168 nm with domain radii
+of 65.6. The GISAXS out-of-plane scan of the corresponding
+thick PS-PI film (Figure 13b) shows no clear peak, indicating
+poor order, with the domains having radii of 48.3 nm. The solid
+lines in Figure 13 are fits to eq 30 using the 2D form factor (eq
+32), which shows the expected q-3 scaling.
+Equations 30 and 32 also allow to calculate the complete twodimensional diffuse scattering pattern of the thin film assuming
+cylinders of a length of L ) 100 nm and polydispersity σL )
+0.3 (Figure 14a). This pattern compares well with the diffuse
+
+We have outlined a general and versatile method that yields
+analytical expressions for the scattering curves of spheres,
+cylinders, and lamellae arranged on different lattices. This allows
+one to quantitatively fit experimentally measured SAXS and
+SANS curves of lipid and block copolymer liquid crystalline
+phases, as well as of core/shell nanoparticle superstructures,
+ordered nanocomposites, and mesoporous materials. For spheres
+arranged in cubic lattices, the description of the scattering curves
+compares with the paracrystal model. For lamellae or bilayers,
+there is good agreement with the Caillé model. Thus, this
+method allows a fast and nearly complete analysis of scattering
+curves of mesoscopically ordered materials. The outlined method
+can be easily extended to describe the diffusive part of out-ofplane scans of GISAXS and GISANS experiments on mesoscopically ordered thin films.
+Acknowledgment. We thank P. Müller-Buschbaum for
+providing the original GISAXS data sets and N. Freiberger and
+O. Glatter for helpful suggestions. Financial support of the SFB
+508 “quantum materials” is gratefully acknowledged.
+Appendix
+Hypergeometric Functions. The hypergeometric functions
+PFQ can be written in terms of series expansions
+
+∞
+
+PFQ[a1,... ,aP,b1,... ,bQ;x] )
+
+∑
+
+(a1)n(a2)n...(aP)n xn
+
+n)0 (b1)n(b2)n...(bQ)n n!
+
+(A1)
+
+where (c)n are the Pochhammer factorials given by
+
+(c)n )
+
+Γ(c + n)
+) c(c + 1)(c + 2)...(c + n - 1) (A2)
+Γ(c)
+
+In the derivation of the scattering functions, the hypergeometric
+
+Figure 14. (a) Calculated two-dimensional diffuse scattering (GISAXS) for a thin PS-PI block copolymer film (Figure 13a) using the fit parameters
+given in Table 5 and assuming a cylinder length of L ) 100 nm with σL ) 0.30. For comparison, the corresponding scattering pattern for narrow
+disperse cylinders (σR ) 0.05, σR ) 0.05) is shown in (b) to illustrate the periodic oscillations due to the form factor of the cylinders.
+
+Scattering Curves of Ordered Mesoscopic Materials
+
+J. Phys. Chem. B, Vol. 109, No. 4, 2005 1359
+
+functions 0F1[b1;x] (eqs 4, 6), 1F2[a1,b1,b2;x] (eqs 5, 7, 20), 2F1[a1,a2,b1;x] (eqs 12, 14), and 3F2[a1,a2,a3,b1,b2;x] (eqs 13, 15,
+22) had been considered. In cases where the hypergeometric
+functions reduce to simpler functions, these have been compiled
+in Table 1. The sums in eq A1 can be easily calculated via
+the recurrence relation of the Pochhammer factorial (c)n+1 )
+(c + n)(c)n. This enables an efficient implementation of these
+functions in fitting algorithms.
+In cases where the hypergeometric function reduces to simple
+trigonometric functions (see Table 1), the expressions for
+2
+(q)〉 involve averages for the Schulz-Zimm
+〈Fd⊥(q)〉 and 〈F d⊥
+distribution which are given by17
+
+〈x2n〉 )
+
+Γ[z + 2n + 1] 2n
+z+1 z+2
+(2u)2n
+u )
+2 n 2 n
+Γ[z + 1]
+
+(
+
+)(
+
+)
+
+(A3)
+
+e.g., for solid particles as the integrand in eqs 12 and 14 and
+the squared integrand in eqs 13 and 15, with R ) 0, as well as
+for core/shell particles and in eq 19. For this function, a quickly
+converging asymptotic expansion is
+
+[
+
+1F2 a1,b1,b2; -
+
+with
+
+〈sin (ax)x 〉 )
+sin [(z + n + 1)arctan(au)]
+Γ[z + n + 2]
+(A4)
+un
+Γ[z + 1](z + n + 1)
+(1 + a2u2)(z+n+1)/2
+Γ[z + n + 1] n cos[(z + n + 1)arctan(au)]
+u
+〈cos(ax)xn〉 )
+Γ[z + 1]
+(1 + a2u2)(z+n+1)/2
+(A5)
+
+〈cos2(ax)xn〉 )
+
+Γ[z + n + 3]
+un
+×
+Γ[z + 1](z + n + 1)(z + n + 2) 2
+cos[(z + n + 1)arctan(2au)]
+1(A6)
+(1 + 4a2u2)(z+n+1)/2
+
+(
+
+)
+
+Γ[z + n + 1] un
+×
+Γ[z + 1] 2
+cos[(z + n + 1)arctan(2au)]
+1+
+(A7)
+(1 + 4a2u2)(z+n+1)/2
+
+(
+
+)
+
+4
+
+n
+Γ[b1]Γ[b2]
+x s1+1/2 max
+π
+1
+-1/2
+π
+cicos x + s1 + + n x-n +
+2
+2
+2
+Γ[a1]
+i)0
+2 -a1 mmax
+Γ[b1]Γ[b2]
+x
+x2 -m
+dm (A11)
+4
+Γ[b1 - a1]Γ[b2 - a1] 4
+m)0
+
+n
+
+〈sin 2(ax)xn〉 )
+
+]
+( ) ∑ [ ( )]
+() ∑ ( )
+
+x2
+
+)
+
+〈sin (ax)cos(ax)x 〉 )
+Γ[z + n + 2]
+un sin [(z + n + 1)arctan(2au)]
+(A8)
+Γ[z + 1](z + n + 1) 2
+(1 + 4a2u2)(z+n+1)/2
+
+dm )
+
+(a1)m(1 + a1 - b1)m(1 + a1 - b2)m
+m!
+
+Here, mmax ) 1 and nmax ) 2 for sufficient accuracy. The first
+two terms of dm are d0 ) 1 and d1 ) a1(1 + a1 - b1)(1 + a1
+- b2). The other constants are given as
+
+c0 ) 1
+c1 )
+
+{
+
+1 1
+12
+1
++ s1 - s1 +
+- 2 - - s 1 + s2
+2 3
+2
+3
+
+(
+
+〈PFQ[a1,... ,aP,b1,... ,bQ; - x2]〉 )
+z+1z+2
+,
+,b1,... ,bQ;(-2u)2 (A9)
+P+2FQ a1,... ,aP,
+2
+2
+
+[
+
+]
+
+which has been used to derive eqs 12, 13, 14, 15, and 22.
+Analytic Continuation and Asymptotic Expansion. For
+large q, the summation in eq A1 can break down due to rounding
+errors. In this case the hypergeometric functions can be
+calculated via analytic continuations or asymptotic expansions.
+For 2F1[a1,a2,b1;x] in eqs 10 and 14, the following analytic
+continuations can be readily applied
+
+x
+[
+x - 1]
+x
+) (1 - x) F [a ,b - a ,b ;
+(A10)
+x - 1]
+
+2F1[a1,a2,b1;x] ) (1 - x)
+
+-a1
+
+2F1 a1,b1 - a2,b2;
+
+-a2
+2 1
+
+2
+
+1
+
+1
+
+1
+
+All scattering amplitudes 〈Fd⊥(q)〉 and
+can be expressed in terms of the hypergeometric function 1F2[a1,b1,b2;x],
+2
+〈F d⊥
+(q)〉
+
+(
+
+)}
+
+(2c1)2
++
+8
+s1 3s2
+1 3
+12
+13 1
+1
++ s3
+s1 +
+- s1 +
+- s1 + + 4 6 2
+2
+2
+2
+2
+2
+2
+
+c2 )
+
+[( ) ( ) ( ) (
+
+)]
+
+s1 ) a1 - b1 - b2
+s2 ) a12 - b12 - b22
+
+n
+
+with u ) jx/(z + 1). For d ) 3, the expression for 〈Fd⊥(q)〉 has
+2
+previously been derived in ref 23 and for 〈F d⊥
+(q)〉 in ref 39.
+2n
+For the average 〈x 〉, the relation in terms of Pochhammer
+factorials as given in eq A3 leads to the general relation
+
+)
+
+s3 ) a13 - b13 - b23
+The averages over the 〈xn〉 and 〈cos(ax)xn〉 are given in eqs
+A3 and A5. The asymptotic behavior is discussed in ref 17. By
+changing from the series expansion (A1) to the asymptotic
+expansion (A11) at intermediate q, one calculates the function
+over the entire q-range.
+Peak Shape Function. The peak shape function L(q) (eq 27)
+is related to the Gamma function Γ[z] as
+
+Lhkl (q) )
+
+2
+
+∞
+
+∏
+
+πδ n ) 0
+
+(
+
+1+
+
+γ2νy2
+
+)
+
+(n + ν/2)2
+
+-1
+
+2 || Γ[ν/2 + iγνy] ||
+|
+|
+πδ |
+Γ[ν/2]
+|
+(A12)
+2
+
+)
+
+with y ) 4(q - qhkl)2/π2δ2. For ν < 0.001 this function is
+practically equal to a Lorentzian, for ν > 1000 practically equal
+to a Gaussian. For ν < 1, the product converges quickly and a
+number of nmax ≈ 20 products is sufficient for high accuracy.
+For ν > 1, convergence becomes slower and values of nmaxf103
+are necessary, until for ν > 1000 the Gaussian function becomes
+an excellent approximation.
+References and Notes
+(1) Förster, S.; Plantenberg, T. Angew. Chem., Int. Ed. 2002, 41, 688.
+(2) Ying, J. Y.; Mehnert, C. P.; Wong, M. S. Angew. Chem., Int. Ed.
+1999, 38, 56.
+(3) Seddon, J. M. Biochim. Biophys. Acta 1990, 41, 525.
+
+1360 J. Phys. Chem. B, Vol. 109, No. 4, 2005
+(4) Bleasdale, T. A.; Tiddy, G. J. T. In The Structure, Dynamics and
+Equilibrium Properties of Colloidal Systems; Bloor, D. M.; Wyn-Jones,
+E.;Eds.; Kluwer Academic: New York, 1990.
+(5) Percus, J. K.; Yevick, G. J. Phys. ReV. 1958, 110, 1.
+(6) Hayter, J. B.; Penfold, J. Mol. Phys. 1981, 42, 109.
+(7) Hansen, J. P.; Hayter, J. B. Mol. Phys. 1982, 46, 651.
+(8) Baxter, R. J. J. Chem. Phys. 1968, 49, 2770.
+(9) Matsuoka, H.; Tanaka, H.; Hashimoto, T.; Ise, N. Phys. ReV. B
+1987, 36, 1754.
+(10) Matsuoka, H.; Tanaka, H.; Iizuka, N.; Hashimoto, T.; Ise, N. Phys.
+ReV. B 1990, 41, 3854.
+(11) Stribeck, N.; Ruland, W. J. Appl. Crystallogr. 1978, 11, 535.
+(12) Nallet, F.; Laversanne, R.; Roux, D. J. Phys. II (France) 1993, 3,
+487.
+(13) Fröba, G.; Kalus, J. J. Phys. Chem. 1995, 99, 14450.
+(14) Pabst, G.; Rappolt, M.; Amenitsch, H.; Laggner, P. Phys. ReV. E
+2000, 62, 4000.
+(15) Ruland, W.; Lecture on Polymer Physics, University of Marburg
+1990.
+(16) Wolff, T.; Ph.D. Thesis, University of Marburg 1994.
+(17) Förster, S.; Burger, C. Macromolecules 1998, 31, 879.
+(18) Förster, S.; Krämer, E. Macromolecules 1999, 32, 2783.
+(19) Schellbach, C.; Diploma Thesis, University of Hamburg, 2003.
+(20) Förster, S. Top. Curr. Chem. 2003, 226, 1.
+(21) Lizmarzan, L. M.; Giersig, M.; Mulvaney, P. Langmuir 1996, 12,
+4329.
+
+Förster et al.
+(22) Nakamura, H.; Förster, S.; Knott, R.; Mulvaney, P.; in preparation.
+(23) Kotlarchyk, M.; Chen, S.-H. J. Chem. Phys. 1983, 79, 2461.
+(24) Weyerich, B.; Brunner-Popela, J.; Glatter, O. J. Appl. Crystallogr.
+1999, 32, 197.
+(25) Higher Transcendental Functions; Erdelyi, A., Ed.; Krieger:
+Florida, 1981; Vol. I.
+(26) Halperin, A.; Tirrell, M.; Lodge, T. P. AdV. Polym. Sci. 1992, 31,
+100.
+(27) Förster, S.; Wenz, E.; Lindner, P. Phys. ReV. Lett. 1996, 77, 95.
+(28) Inouye, H.; Kirschner, D. A. Fibre Diffr. ReV. 2003, 11, 102.
+(29) Caillé, A. C. R. Acad. Sci. Paris 1972, B274, 891.
+(30) Roux, D.; Safinya, C. R. J. Phys. (France) 1988, 49, 307.
+(31) Fundamentals of Crystallography; Giacovazzo, C., Ed.; Oxford:
+New York, 1992.
+(32) Micha, M. A.; Ph.D. Thesis, University of Potsdam, 1998.
+(33) Pedersen, J. S. AdV. Colloid Interface Sci. 1997, 70, 171.
+(34) Müller-Buschbaum, P. Anal. Bioanal. Chem. 2003, 376, 3.
+(35) Rauscher, M.; Salditt, T.; Spohn, H. Phys. ReV. B 1995, 52,
+16855.
+(36) Iizuka, N.; Bodycomb, J.; Hasegawa, H.; Hashimoto, T. Macromolecules 1998, 31, 7256.
+(37) Göltner, C.; Smarsly, B.; Berton, B.; Antonietti, M. Chem. Mater.
+2001, 13, 1617.
+(38) Förster, S.; Konrad, M.; Lindner, P. Phys. ReV. Lett., in press.
+(39) Huang, J. S.; Sung, J.; Wu, X.-L. J. Colloid Interface Sci. 1989,
+132, 34.
+
+
