@@ -35,7 +35,12 @@ def load_curve(name: str) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
 
 def find_peaks_smooth(q: np.ndarray, I: np.ndarray, qmin: float, qmax: float,
                       window: int, prom_frac: float) -> list[tuple[float, float]]:
-    """Сглаживание + поиск пиков в диапазоне q."""
+    """Сглаживание + поиск пиков в диапазоне q.
+
+    Данные: data/Zalygin_DESY/red.dat, data/Zalygin_DESY/green.dat (через load_curve)
+    Проверка: задача 1 (поиск пиков) — checks/check.py, погрешность q ≤ 5%
+    Используется в: src/zalygin_peaks.py::main, src/zalygin_phases.py::main
+    """
     mask = (q >= qmin) & (q <= qmax)
     qs, Is = q[mask], I[mask]
     if len(qs) < window:

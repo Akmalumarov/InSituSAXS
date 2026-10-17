@@ -60,7 +60,12 @@ def build_graph(bonds):
 
 
 def split_tail_head(atoms, adj):
-    """Хвост = две C18-цепи + их H; голова = всё остальное."""
+    """Хвост = две C18-цепи + их H; голова = всё остальное.
+
+    Данные: data/Zalygin_DESY/molecule.pdb (через parse_pdb)
+    Проверка: нет независимой проверки
+    Используется в: src/electron_density.py::main
+    """
     tail = set(TAIL_C)
     for a in atoms:
         if a[2] == "H" and any(m in TAIL_C for m in adj[a[0]]):
@@ -82,7 +87,12 @@ def electrons(comp):
 
 
 def vdw_volume(atoms, idxs, grid=160):
-    """Ван-дер-ваальсов объём набора атомов (метод сетки)."""
+    """Ван-дер-ваальсов объём набора атомов (метод сетки).
+
+    Данные: атомы из data/Zalygin_DESY/molecule.pdb
+    Проверка: нет независимой проверки
+    Используется в: src/electron_density.py::main
+    """
     sel = [a for a in atoms if a[0] in idxs]
     coords = np.array([[a[3], a[4], a[5]] for a in sel])
     radii = np.array([VDW_R[a[2]] for a in sel])
@@ -98,7 +108,12 @@ def vdw_volume(atoms, idxs, grid=160):
 
 
 def tail_group_volume(comp):
-    """Объём хвоста из групповых объёмов: 2 цепи, каждая C18H33 = 17 CH2 + 1 CH3."""
+    """Объём хвоста из групповых объёмов: 2 цепи, каждая C18H33 = 17 CH2 + 1 CH3.
+
+    Данные: состав хвоста из data/Zalygin_DESY/molecule.pdb
+    Проверка: нет независимой проверки
+    Используется в: src/electron_density.py::main
+    """
     n_ch2 = 2 * 17
     n_ch3 = 2 * 1
     return n_ch2 * V_CH2 + n_ch3 * V_CH3

@@ -23,12 +23,22 @@ from scipy.special import j0, j1
 # ---------------------------------------------------------------------------
 
 def _sinc(x: np.ndarray) -> np.ndarray:
-    """sin(x)/x, устойчиво при x -> 0."""
+    """sin(x)/x, устойчиво при x -> 0.
+
+    Данные: x (массив аргументов)
+    Проверка: нет независимой проверки (вспомогательная)
+    Используется в: src/FormFactors/form_factors.py::cylinder_amplitude, ::core_shell_cylinder_amplitude, ::cylinder_radial_amplitude
+    """
     return np.sinc(np.asarray(x, dtype=float) / np.pi)
 
 
 def _j1_over_x(x: np.ndarray) -> np.ndarray:
-    """J1(x)/x, устойчиво при x -> 0 (предел = 1/2)."""
+    """J1(x)/x, устойчиво при x -> 0 (предел = 1/2).
+
+    Данные: x (массив аргументов)
+    Проверка: нет независимой проверки (вспомогательная)
+    Используется в: src/FormFactors/form_factors.py::infinite_cylinder_amplitude, ::cylinder_amplitude, ::core_shell_cylinder_amplitude, ::infinite_cylinder_intensity_pd, ::infinite_cylinder_intensity_pd_norm
+    """
     x = np.asarray(x, dtype=float)
     out = np.empty_like(x)
     small = np.abs(x) < 1e-4
@@ -38,7 +48,12 @@ def _j1_over_x(x: np.ndarray) -> np.ndarray:
 
 
 def _sphere_f(x: np.ndarray) -> np.ndarray:
-    """f(x) = 3 (sin x - x cos x) / x^3, f(0) = 1."""
+    """f(x) = 3 (sin x - x cos x) / x^3, f(0) = 1.
+
+    Данные: x (массив аргументов)
+    Проверка: нет независимой проверки (вспомогательная)
+    Используется в: src/FormFactors/form_factors.py::sphere_amplitude, ::core_shell_sphere_amplitude, ::sphere_intensity_pd, ::sphere_intensity_pd_norm
+    """
     x = np.asarray(x, dtype=float)
     out = np.empty_like(x)
     small = np.abs(x) < 1e-4
@@ -48,7 +63,12 @@ def _sphere_f(x: np.ndarray) -> np.ndarray:
 
 
 def _orient_avg(amp_fn: Callable[[float], float], q: np.ndarray, V: float) -> np.ndarray:
-    """Усреднение по ориентации: P(q) = (1/V) ∫_0^{π/2} F(q,α)^2 sinα dα."""
+    """Усреднение по ориентации: P(q) = (1/V) ∫_0^{π/2} F(q,α)^2 sinα dα.
+
+    Данные: amp_fn, q (нм^-1), V
+    Проверка: нет независимой проверки (вспомогательная)
+    Используется в: src/FormFactors/form_factors.py::cylinder_intensity, ::core_shell_cylinder_intensity, ::cylinder_radial_intensity
+    """
     out = np.empty_like(np.asarray(q, dtype=float))
     for i, qi in enumerate(np.asarray(q, dtype=float)):
         val, _ = quad(lambda a: amp_fn(qi, a) ** 2 * np.sin(a), 0.0, np.pi / 2.0, limit=500)
@@ -61,13 +81,23 @@ def _orient_avg(amp_fn: Callable[[float], float], q: np.ndarray, V: float) -> np
 # ---------------------------------------------------------------------------
 
 def sphere_amplitude(q: np.ndarray, R: float, rho: float = 1.0) -> np.ndarray:
-    """Амплитуда однородной сферы радиуса R с контрастом rho."""
+    """Амплитуда однородной сферы радиуса R с контрастом rho.
+
+    Данные: q (нм^-1), R, rho
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::sphere_intensity
+    """
     V = 4.0 / 3.0 * np.pi * R ** 3
     return rho * V * _sphere_f(np.asarray(q, dtype=float) * R)
 
 
 def sphere_intensity(q: np.ndarray, R: float, rho: float = 1.0) -> np.ndarray:
-    """P(q) однородной сферы, нормированная на объём."""
+    """P(q) однородной сферы, нормированная на объём.
+
+    Данные: q (нм^-1), R, rho
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::sphere_intensity_pd
+    """
     V = 4.0 / 3.0 * np.pi * R ** 3
     return sphere_amplitude(q, R, rho) ** 2 / V
 
@@ -80,7 +110,12 @@ def core_shell_sphere_amplitude(
     rho_shell: float,
     rho_solv: float = 0.0,
 ) -> np.ndarray:
-    """Амплитуда сферы с ядром и оболочкой (концентрические сферы)."""
+    """Амплитуда сферы с ядром и оболочкой (концентрические сферы).
+
+    Данные: q (нм^-1), R_core, R_shell, rho_core, rho_shell, rho_solv
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::core_shell_sphere_intensity
+    """
     Vc = 4.0 / 3.0 * np.pi * R_core ** 3
     Vs = 4.0 / 3.0 * np.pi * R_shell ** 3
     q = np.asarray(q, dtype=float)
@@ -98,7 +133,12 @@ def core_shell_sphere_intensity(
     rho_shell: float,
     rho_solv: float = 0.0,
 ) -> np.ndarray:
-    """P(q) сферы с ядром и оболочкой, нормированная на объём оболочки."""
+    """P(q) сферы с ядром и оболочкой, нормированная на объём оболочки.
+
+    Данные: q (нм^-1), R_core, R_shell, rho_core, rho_shell, rho_solv
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: экспортируется в src/FormFactors/__init__.py
+    """
     Vs = 4.0 / 3.0 * np.pi * R_shell ** 3
     return core_shell_sphere_amplitude(q, R_core, R_shell, rho_core, rho_shell, rho_solv) ** 2 / Vs
 
@@ -111,6 +151,10 @@ def infinite_cylinder_amplitude(q: np.ndarray, R: float, rho: float = 1.0, L: fl
     """Амплитуда бесконечного цилиндра (L >> R), ось ⊥ q.
 
     F(q) = 2 V rho J1(qR)/(qR), V = π R^2 L.
+
+    Данные: q (нм^-1), R, rho, L
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::infinite_cylinder_intensity
     """
     V = np.pi * R ** 2 * L
     return 2.0 * rho * V * _j1_over_x(np.asarray(q, dtype=float) * R)
@@ -122,6 +166,10 @@ def infinite_cylinder_intensity(q: np.ndarray, R: float, rho: float = 1.0, L: fl
     Ориентационно-усреднённый форм-фактор длинного цилиндра (L >> R):
     P(q) = rho^2 V [2 J1(qR)/(qR)]^2 / q,  V = pi R^2 L.
     Фактор 1/q — от усреднения по ориентации оси цилиндра.
+
+    Данные: q (нм^-1), R, rho, L
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::infinite_cylinder_intensity_pd
     """
     V = np.pi * R ** 2 * L
     q = np.asarray(q, dtype=float)
@@ -139,6 +187,10 @@ def cylinder_amplitude(
 
     alpha — угол между осью цилиндра и q. Если alpha=None, возвращается
     функция F(q, alpha) для последующего усреднения по ориентации.
+
+    Данные: q (нм^-1), R, L, rho, alpha
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::cylinder_intensity
     """
     V = np.pi * R ** 2 * L
 
@@ -153,7 +205,12 @@ def cylinder_amplitude(
 
 
 def cylinder_intensity(q: np.ndarray, R: float, L: float, rho: float = 1.0) -> np.ndarray:
-    """P(q) конечного цилиндра, усреднённая по ориентации."""
+    """P(q) конечного цилиндра, усреднённая по ориентации.
+
+    Данные: q (нм^-1), R, L, rho
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: экспортируется в src/FormFactors/__init__.py
+    """
     V = np.pi * R ** 2 * L
     return _orient_avg(cylinder_amplitude(q, R, L, rho), q, V)
 
@@ -168,7 +225,12 @@ def core_shell_cylinder_amplitude(
     rho_solv: float = 0.0,
     alpha: float | None = None,
 ) -> np.ndarray | Callable[[float, float], float]:
-    """Амплитуда цилиндра с ядром и оболочкой (одинаковая длина L)."""
+    """Амплитуда цилиндра с ядром и оболочкой (одинаковая длина L).
+
+    Данные: q (нм^-1), R_core, R_shell, L, rho_core, rho_shell, rho_solv, alpha
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::core_shell_cylinder_intensity
+    """
     Vc = np.pi * R_core ** 2 * L
     Vs = np.pi * R_shell ** 2 * L
 
@@ -195,7 +257,12 @@ def core_shell_cylinder_intensity(
     rho_shell: float,
     rho_solv: float = 0.0,
 ) -> np.ndarray:
-    """P(q) цилиндра с ядром и оболочкой, усреднённая по ориентации."""
+    """P(q) цилиндра с ядром и оболочкой, усреднённая по ориентации.
+
+    Данные: q (нм^-1), R_core, R_shell, L, rho_core, rho_shell, rho_solv
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: экспортируется в src/FormFactors/__init__.py
+    """
     Vs = np.pi * R_shell ** 2 * L
     return _orient_avg(
         core_shell_cylinder_amplitude(q, R_core, R_shell, L, rho_core, rho_shell, rho_solv),
@@ -220,6 +287,10 @@ def cylinder_radial_amplitude(
 
     rho_r — callable: r -> электронная плотность (e-/nm^3).
     alpha=None → возвращает функцию F(q, alpha) для усреднения по ориентации.
+
+    Данные: q (нм^-1), rho_r, R, L, alpha
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::cylinder_radial_intensity
     """
     def amp(qi: float, a: float) -> float:
         s = np.sin(a)
@@ -240,6 +311,10 @@ def cylinder_radial_intensity(
     """P(q) цилиндра с радиальным профилем, усреднённая по ориентации.
 
     Нормировка на объём цилиндра V = π R^2 L.
+
+    Данные: q (нм^-1), rho_r, R, L
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: экспортируется в src/FormFactors/__init__.py
     """
     V = np.pi * R ** 2 * L
     return _orient_avg(cylinder_radial_amplitude(q, rho_r, R, L), q, V)
@@ -254,6 +329,10 @@ def infinite_cylinder_radial_amplitude(
     """Форм-фактор бесконечного цилиндра с радиальным профилем rho_r(r).
 
     F(q) = 2π L ∫_0^R rho_r(r) J0(q r) r dr  (ось ⊥ q).
+
+    Данные: q (нм^-1), rho_r, R, L
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: src/FormFactors/form_factors.py::infinite_cylinder_radial_intensity
     """
     q = np.asarray(q, dtype=float)
     out = np.empty_like(q)
@@ -269,7 +348,12 @@ def infinite_cylinder_radial_intensity(
     R: float,
     L: float = 1.0,
 ) -> np.ndarray:
-    """P(q) бесконечного цилиндра с радиальным профилем, нормированная на объём."""
+    """P(q) бесконечного цилиндра с радиальным профилем, нормированная на объём.
+
+    Данные: q (нм^-1), rho_r, R, L
+    Проверка: задача 2 (фит форм-факторов) — checks/check.py, погрешность ≤ 5%
+    Используется в: экспортируется в src/FormFactors/__init__.py
+    """
     V = np.pi * R ** 2 * L
     return infinite_cylinder_radial_amplitude(q, rho_r, R, L) ** 2 / V
 

@@ -52,7 +52,12 @@ def find_peaks_smooth(q: np.ndarray, I: np.ndarray, qmin: float, qmax: float,
 
 def match_phase(peaks: list[float], tol: float = 0.05) -> tuple[str, list[str], float]:
     """Определяет фазу по отношениям q/q1. Штраф за пропущенные рефлексы.
-    Возвращает (имя, индексы, q1)."""
+    Возвращает (имя, индексы, q1).
+
+    Данные: пики из find_peaks_smooth (кривые data/Zalygin_DESY/red.dat, green.dat)
+    Проверка: задача 1 (определение фазы) — checks/check.py, погрешность q ≤ 5%
+    Используется в: src/zalygin_phases.py::main
+    """
     q1 = peaks[0]
     ratios = [p / q1 for p in peaks]
     best, best_score, best_idx = None, 1e9, None
