@@ -15,5 +15,10 @@ __pycache__/
 # Sample Data
 *.pdb
 
+# My Results
+/notebooks/science/*.ipynb
+/results/**/*.png
+/results/**/*.csv
+
 # Literature
 /references/**/*.pdf
