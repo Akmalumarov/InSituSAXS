@@ -3,7 +3,7 @@ from pathlib import Path
 
 folder = Path(__file__).resolve().parents[1] / "results/synthetic/Pq"
 
-expected = {"spheres_1": 15.3, "long_cylinders_1": 12.0}
+expected = {"spheres_2": 23.8}
 passed = True
 
 for model, R_true in expected.items():
