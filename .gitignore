@@ -7,10 +7,13 @@ __pycache__/
 *.pyc
 .DS_Store
 
-# Heavy data
+# X-Ray Data
 *.dat
 *.edf
 *.h5
 
+# Sample Data
 *.pdb
+
+# Literature
 /references/**/*.pdf
